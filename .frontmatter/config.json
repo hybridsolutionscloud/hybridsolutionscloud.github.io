@@ -1,0 +1,15 @@
+{
+  "content": [
+    {
+      "folder": "src/pages",
+      "label": "Pages",
+      "name": "pages",
+      "type": "page"
+    }
+  ],
+  "settings": {
+    "slug": {
+      "type": "folder"
+    }
+  }
+}
