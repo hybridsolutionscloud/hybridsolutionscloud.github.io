@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+  title: 'Thank You | Hybrid Cloud Solutions, LLC',
+  description: 'Thanks for reaching out to Hybrid Cloud Solutions, LLC. We’ll be in touch soon.',
+};
+---
+
+<Layout seo={seo}>
+  <section class="thanks-page__section">
+    <div class="thanks-page__container">
+      <h1 class="text-4xl font-bold mb-4">Thank You!</h1>
+      <p class="text-lg mb-6">
+        We've received your message and will get back to you as soon as possible.
+      </p>
+      <p class="mb-6">
+        In the meantime, feel free to explore our services or follow us for updates.
+      </p>
+      <a href="/" class="btn btn-primary">Return Home</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .thanks-page__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(90vh - var(--navbar-height));
+    padding: 4rem 2rem;
+    background-color: var(--theme-surface-1);
+  }
+
+  .thanks-page__container {
+    max-width: 600px;
+    text-align: center;
+    background: var(--theme-background);
+    padding: 3rem;
+    border-radius: var(--theme-shape-radius);
+    box-shadow: var(--theme-shadow);
+  }
+
+  .btn-primary {
+    background-color: var(--theme-primary, #0f172a);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display:
