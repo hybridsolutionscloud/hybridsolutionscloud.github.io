@@ -5,7 +5,6 @@ import {
 	Button,
 	CustomerQuoteSection,
 	ThreeColumnTextSection,
-	YouTubeEmbedSection,
 	StickyTextImageSection,
 	CtaCardSection,
 } from '@components/odyssey-theme';
@@ -13,126 +12,108 @@ import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'Landing Page #1 | Astro Odyssey Theme',
-	description: 'Landing Page #1 | Astro Odyssey Theme',
+	title: 'Hybrid Cloud Made Simple | Hybrid Cloud Solutions, LLC',
+	description: 'Microsoft hybrid cloud expertise for Azure Stack HCI, Hyper-V, Azure Arc, and edge modernization.',
 };
 ---
 
 <AnnouncementBar
-	text="Hybrid Cloud Solutions, LLC is being built on Astro using the Odyssey Theme."
-	href="/company/about"
+	text="Hybrid Cloud Solutions, LLC is now live — contact us to modernize your infrastructure."
+	href="/company/contact"
 	slot="announcement-bar"
 />
+
 <Layout {seo}>
 	<TextAndImageHero reversed>
 		<div slot="text-container">
-			<h1>Don't Reinvent the Wheel</h1>
-			<p>Use Odyssey Theme to jumpstart your company's marketing website.</p>
+			<h1>Hybrid Cloud Made Simple</h1>
+			<p>
+				From Azure Local to Hyper-V and Azure Arc — grounded, resilient hybrid cloud solutions designed for the edge and the enterprise.
+			</p>
 		</div>
 		<div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>Get Started <Fragment slot="icon">
+			<Button href="/company/contact" customIcon>
+				Schedule a Consult
+				<Fragment slot="icon">
 					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button
-			>
+				</Fragment>
+			</Button>
 		</div>
 		<picture slot="image-container">
 			<img
-				src="/assets/images/landing-1/landing-hero-1.jpg"
-				alt="Astro Odyssee"
+				src="/assets/images/hybrid-hero.jpg"
+				alt="Hybrid Cloud Architecture Diagram"
 				id="home-hero-image"
 			/>
 		</picture>
 	</TextAndImageHero>
 
 	<CustomerQuoteSection
-		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
-		customerName="Happy Customer"
+		quoteText="Working with Hybrid Cloud Solutions was a game-changer. Their knowledge of Azure Arc and on-prem infrastructure helped us move faster without compromising on governance."
+		customerName="— Enterprise Infrastructure Lead"
 	/>
 
 	<ThreeColumnTextSection>
 		<div slot="column-1-body">
-			<h2>Why?</h2>
+			<h2>Why Hybrid?</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Not every workload belongs in the public cloud. We help you modernize on your own terms — blending Azure capabilities with resilient on-prem infrastructure.
 			</p>
 		</div>
-		<Button slot="column-1-cta">Learn More</Button>
-		<div slot="column-2-body">
-			<h2>How?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
-			</p>
-		</div>
-		<Button slot="column-2-cta" outlined>Learn More</Button>
-		<div slot="column-3-body">
-			<h2>What?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
-			</p>
-		</div>
-		<Button slot="column-3-cta">Learn More</Button>
-	</ThreeColumnTextSection>
+		<Button slot="column-1-cta" href="/company/about">Learn More</Button>
 
-	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
-	/>
+		<div slot="column-2-body">
+			<h2>How We Help</h2>
+			<p>
+				From Azure Local to Hyper-V clusters and Azure Arc governance — we design and deliver practical solutions rooted in real-world experience.
+			</p>
+		</div>
+		<Button slot="column-2-cta" href="/company/contact" outlined>Contact Us</Button>
+
+		<div slot="column-3-body">
+			<h2>What We Deliver</h2>
+			<p>
+				Azure Local deployments, Storage Spaces Direct, Azure Arc Services, and hybrid cloud automation — tailored for your unique infrastructure.
+			</p>
+		</div>
+		<Button slot="column-3-cta" href="/services">Explore Services</Button>
+	</ThreeColumnTextSection>
 
 	<StickyTextImageSection>
 		<div slot="text-container">
-			<h2>Features</h2>
-			<h3>SEO</h3>
+			<h2>What Makes Us Different</h2>
+			<h3>Microsoft MVP Expertise</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				With recognized leadership in the Azure Hybrid community, we bring insights from the front lines of Microsoft’s hybrid ecosystem.
 			</p>
-			<h3>Responsive</h3>
+			<h3>Craftsmanship Meets Cloud</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We approach cloud architecture with the same care you'd find in a woodshop — patient, precise, and purpose-driven.
 			</p>
-			<h3>Themeable</h3>
+			<h3>Edge-Ready Solutions</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We specialize in remote site deployments, secure automation, and Azure services that run on your terms — anywhere.
 			</p>
 		</div>
 		<picture slot="image-container">
 			<img
-				src="/assets/images/landing-1/landing-sticky.jpg"
-				alt="Astro Odyssey"
+				src="/assets/images/features-hybrid.jpg"
+				alt="Azure Hybrid Features"
 				loading="lazy"
 			/>
 		</picture>
 	</StickyTextImageSection>
 
-	<CtaCardSection
-		background="var(--theme-surface-2)"
-		color="var(--theme-on-surface-2)"
-	>
-		<h2>Start Your Website Today</h2>
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Ready to Build Your Hybrid Cloud?</h2>
 		<p>
-			It only takes a couple clicks to have a new, modern website for your
-			business or startup.
+			Let’s design a solution that blends the best of Azure with the infrastructure you trust.
 		</p>
-		<Button href="/theme/get-started" customIcon
-			>Get Started <Fragment slot="icon">
+		<Button href="/company/contact" customIcon>
+			Get Started
+			<Fragment slot="icon">
 				<Icon name="ic:baseline-chevron-right" />
-			</Fragment></Button
-		>
+			</Fragment>
+		</Button>
 	</CtaCardSection>
 </Layout>
