@@ -11,11 +11,10 @@
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
-      "name": "default",
+      "name": "page",
       "pageBundle": false,
-      "previewPath": "'blog'",
-      "filePrefix": null,
-      "clearEmpty": true,
+      "previewPath": "/{slug}",
+      "filePath": "src/content/pages",
       "fields": [
         {
           "title": "Title",
@@ -24,22 +23,10 @@
           "single": true
         },
         {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "pubDate",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "heroImage",
-          "type": "image",
-          "isPreviewImage": true
+          "title": "Slug",
+          "name": "slug",
+          "type": "string",
+          "single": true
         }
       ]
     }

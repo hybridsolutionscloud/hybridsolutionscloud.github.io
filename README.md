@@ -1,35 +1,74 @@
-# Astro Starter Kit: Minimal
+# blackspike astro landing page
 
-```sh
-npm create astro@latest -- --template minimal
-```
+[<img src="public/theme-preview/github-preview.jpg" alt="screens showing theme parts on iPads" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/github-preview.jpg)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## A free, modern, [Astro](https://astro.build/) landing page theme made with [Tailwind](https://tailwindcss.com/) to help kick start your next Astro project
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+We built this page as the first version of our own website, [blackspike.com](https://www.blackspike.com), but switched to a different design later.
 
-## 🚀 Project Structure
+Rather than let it gather dust, we decided to modernise it, try out some fresh new CSS features and give it back to the Astro community.
 
-Inside of your Astro project, you'll see the following folders and files:
+You can read more about how we built it and the cool new tech we used [on our blog post](https://astro.build/themes/details/blackspike-astro-landing-page/).
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Now available as an official Astro theme! [Download it from the Astro themes page](https://astro.build/themes/details/blackspike-astro-landing-page/)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Live demo https://astro-theme.blackspike.com
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+We hope you find it useful!
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
 
-## 🧞 Commands
+Theme and 3D images are licensed under a [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/).
+
+Created by blackspike [blackspike design](https://www.blackspike.com) – a web design & development team specialising in Astro, Vue, Nuxt & Wordpress websites
+
+## Astro 5 Features
+
+- [Image component](https://docs.astro.build/en/guides/images/#display-optimized-images-with-the-image--component) for optimised AVIF images
+- All-[JSX](https://docs.astro.build/en/reference/astro-syntax/) native astro components
+- SVGs imported as [SVG components](https://docs.astro.build/en/guides/images/#svg-components)
+- JSON-powered content (easy to edit UI text or hook up a CMS!)
+- Experimental [Fonts API](https://docs.astro.build/en/reference/experimental-flags/fonts/)
+
+## CSS & HTML Features
+
+- [Tailwind 4](https://tailwindcss.com/blog/tailwindcss-v4)
+- HTML modal dialog
+- JS-free scroll-linked animations
+- JS-free exclusive accordions with details/summary (animated!)
+- Container queries
+- Linear easing for bouncing / springing
+- Text wrap pretty / balance
+
+## JS Features
+
+- [swiper.js](https://swiperjs.com/) carousel
+
+## Previews
+
+[<img src="public/theme-preview/blackspike-theme-1.jpg" alt="screenshot of dark theme landing page on desktop and on ipad browsers" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-1.jpg)
+
+[<img src="public/theme-preview/blackspike-theme-2.jpg" alt="screenshot of dark theme carousel slides with 3D backgrounds" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-2.jpg)
+
+[<img src="public/theme-preview/blackspike-theme-4.jpg" alt="screens showing theme parts" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-4.jpg)
+
+[<img src="public/theme-preview/blackspike-theme-5.jpg" alt="dark theme pricing section on laptop and iPhone browsers" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-5.jpg)
+
+[<img src="public/theme-preview/blackspike-theme-full.webp" alt="full page preview" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-full.webp)
+
+## Credits
+
+- Fake logos by [uicontent.co](https://uicontent.co/svg-dummy-logo/)
+- Quote avatar person by [thispersondoesnotexist.com](https://thispersondoesnotexist.com/)
+- Misc icons and logo from [icones.js.org](https://icones.js.org/) by [@antfu](https://github.com/antfu)
+- Carousel powered by [swiperjs.com](https://swiperjs.com/)
+- Inter font by [rsms.me](https://rsms.me/inter/)
+
+## Tags
+
+#tailwind #tailwind4 #astro #landingPage #css #html #swiper #dark #theme
+
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -42,6 +81,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
