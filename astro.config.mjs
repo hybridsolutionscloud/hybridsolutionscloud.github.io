@@ -1,54 +1,12 @@
-import { defineConfig } from 'astro/config'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'astro/config';
+import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+import icon from "astro-icon";
+import lit from "@astrojs/lit";
 
+// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  },
-  experimental: {
-    fonts: [{
-      provider: "local",
-      name: "InterLocal",
-      cssVariable: "--font-inter",
-      variants: [
-        {
-          weight: 400,
-          style: "normal",
-          src: ["./src/assets/fonts/Inter-Regular.woff2"]
-        },
-        {
-          weight: 600,
-          style: "normal",
-          src: ["./src/assets/fonts/Inter-SemiBold.woff2"]
-        },
-        {
-          weight: 700,
-          style: "normal",
-          src: ["./src/assets/fonts/Inter-Bold.woff2"]
-        }
-      ]
-    },
-    {
-      provider: "local",
-      name: "InterLocalDisplay",
-      cssVariable: "--font-inter-display",
-      variants: [
-        {
-          weight: 400,
-          style: "normal",
-          src: ["./src/assets/fonts/InterDisplay-Regular.woff2"]
-        },
-        {
-          weight: 500,
-          style: "normal",
-          src: ["./src/assets/fonts/InterDisplay-Medium.woff2"]
-        },
-        {
-          weight: 600,
-          style: "normal",
-          src: ["./src/assets/fonts/InterDisplay-SemiBold.woff2"]
-        }
-      ]
-    }]
-  }
-})
+  site: 'https://www.hybridsolutions.cloud/', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  sitemap: true, // Generate sitemap (set to "false" to disable)
+  integrations: [sitemap(), mdx(), lit(), icon()], // Add renderers to the config
+});

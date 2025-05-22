@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Contact | Hybrid Cloud Solutions, LLC',
+	description: 'Reach out to Hybrid Cloud Solutions, LLC for Azure hybrid consulting and solutions.',
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<section class="contact-hero__section">
+			<div class="contact-hero__text-section">
+				<h1>Let’s Talk Hybrid Cloud</h1>
+				<p>
+					Whether you're planning an Azure Local deployment, setting up a Hyper-V cluster, or enabling Azure Arc on the edge — Hybrid Cloud Solutions, LLC is here to help.
+				</p>
+				<p>
+					We specialize in grounded, real-world hybrid solutions using Microsoft technologies, and we’d love to hear from you.
+				</p>
+				<p>
+					<em><a href="mailto:contact@hybridsolutions.cloud">contact@hybridsolutions.cloud</a></em>
+				</p>
+				<p>
+					Prefer to book time directly? <a href="https://calendly.com/your-link" target="_blank">Schedule a consult</a>.
+				</p>
+			</div>
+
+			<div class="col-2__container">
+				<form 
+					action="https://submit-form.com/tJdRWGIgc" 
+					method="POST" 
+					class="contact-form"
+				>
+					<!-- Honeypot for spam bots -->
+					<input 
+						type="text" 
+						name="_honeypot" 
+						style="display:none;" 
+						tabindex="-1" 
+						autocomplete="off" 
+					/>
+
+					<!-- Redirect to thank-you page -->
+					<input type="hidden" name="_redirect" value="https://www.hybridsolutions.cloud/thanks" />
+
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required placeholder="Your full name" />
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required placeholder="your@email.com" />
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Send Message</button>
+				</form>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-group label {
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		padding: 0.75rem;
+		font-size: 1rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--theme-border-color, #ccc);
+	}
+
+	.btn-primary {
+		background-color: var(--theme-primary, #0f172a);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border: none;
+		border-radius: 0.5rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	.btn-primary:hover {
+		background-color: var(--theme-primary-hover, #1e293b);
+	}
+
+	@media (max-width: 768px) {
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

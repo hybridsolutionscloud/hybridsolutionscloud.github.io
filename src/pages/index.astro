@@ -1,74 +1,138 @@
 ---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
 
-import Layout from "../layouts/Layout.astro"
-
-import CaseStudiesSection from "../components/CaseStudiesSection.astro"
-import ClientsSection from "../components/ClientsSection.astro"
-import FaqSection from "../components/FaqSection.astro"
-import ServicesCarousel from "../components/ServicesCarousel.astro"
-import HeroSection from "../components/HeroSection.astro"
-import NewsletterSection from "../components/NewsletterSection.astro"
-import PricingSection from "../components/PricingSection.astro"
-import QuoteSection from "../components/QuoteSection.astro"
-import TestimonialsSection from "../components/TestimonialsSection.astro"
-
-import caseStudies from "../data/case_studies.json"
-import clients from "../data/clients.json"
-import faq from "../data/faq.json"
-import services from "../data/services.json"
-import home from "../data/home.json"
-import pricing from "../data/pricing.json"
-import global_settings from "../data/global_settings.json"
-import newsletter from "../data/newsletter.json"
-import testimonials from "../data/testimonials.json"
-
+const seo = {
+	title: 'Landing Page #1 | Astro Odyssey Theme',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
 ---
 
-<Layout title={ global_settings.title }>
+<AnnouncementBar
+	text="Read Our Latest Blog Post"
+	href="/blog/posts/remote-work-mental-health/"
+	slot="announcement-bar"
+/>
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Don't Reinvent the Wheel</h1>
+			<p>Use Odyssey Theme to jumpstart your company's marketing website.</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="/theme/get-started" customIcon
+				>Get Started <Fragment slot="icon">
+					<Icon name="ic:baseline-chevron-right" />
+				</Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-hero-1.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
 
-  <HeroSection
-    content={ home.hero_content }
-    settings={ global_settings }
-    title={ home.hero_title }
-  />
+	<CustomerQuoteSection
+		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
+		customerName="Happy Customer"
+	/>
 
-  <ServicesCarousel
-    services={ services }
-    title={ home.services_title }
-  />
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Why?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-1-cta">Learn More</Button>
+		<div slot="column-2-body">
+			<h2>How?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<div slot="column-3-body">
+			<h2>What?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection>
 
-  <ClientsSection
-    clients={ clients }
-    title={ home.clients_title }
-  />
+	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
+	/>
 
-  <QuoteSection
-    cite={ home.quote_cite }
-    content={ home.quote_content }
-    image={ home.quote_image }
-    role={ home.quote_role }
-  />
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>Features</h2>
+			<h3>SEO</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+			<h3>Responsive</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+			<h3>Themeable</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-sticky.jpg"
+				alt="Astro Odyssey"
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
 
-  <CaseStudiesSection
-    caseStudies={ caseStudies }
-    title={ home.case_studies_title }
-  />
-
-  <TestimonialsSection
-    testimonials={ testimonials }
-    title={ home.testimonials_title }
-  />
-
-  <PricingSection
-    pricing={ pricing }
-    title={ home.pricing_title }
-  />
-
-  <FaqSection
-    faq={ faq }
-    title={ home.faq_title }
-  />
-
-  <NewsletterSection newsletter={newsletter} />
-
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Start Your Website Today</h2>
+		<p>
+			It only takes a couple clicks to have a new, modern website for your
+			business or startup.
+		</p>
+		<Button href="/theme/get-started" customIcon
+			>Get Started <Fragment slot="icon">
+				<Icon name="ic:baseline-chevron-right" />
+			</Fragment></Button
+		>
+	</CtaCardSection>
 </Layout>

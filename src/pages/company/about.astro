@@ -1,0 +1,55 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About | Hybrid Cloud Solutions, LLC',
+	description: 'About Hybrid Cloud Solutions, LLC — bridging Microsoft hybrid cloud technologies with real-world solutions.',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>About Hybrid Cloud Solutions, LLC</h1>
+			<p>
+				Founded by Microsoft MVP Kristopher Turner, Hybrid Cloud Solutions, LLC helps organizations modernize with confidence through Microsoft hybrid cloud technologies like Azure Arc, Azure Local (Azure Stack HCI), and Hyper-V.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/classic-hero.jpg"
+				alt=""
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<TextSection narrow>
+		<p>
+			Based in the western mountains of Virginia, Kristopher brings together a deep technical background with a craftsman’s mindset. As a Product Technology Architect and hybrid cloud consultant, he has helped public and private sector organizations transform their infrastructure using Microsoft-native technologies.
+		</p>
+
+		<p>
+			When not building hybrid solutions, Kristopher enjoys time on the homestead with his family, working in the woodshop, or slow-smoking Texas-style BBQ. That same attention to detail, patience, and resilience carries into the hybrid architectures he designs—reliable, repeatable, and built to last.
+		</p>
+
+		<p>
+			Hybrid Cloud Solutions, LLC exists to make hybrid cloud simpler, more accessible, and better aligned to each organization’s needs—whether you're modernizing a datacenter, enabling Azure Arc policy at the edge, or deploying resilient Hyper-V clusters with Storage Spaces Direct.
+		</p>
+
+		<h2>Mission</h2>
+		<p>
+			To bridge the gap between cloud and datacenter by delivering practical, resilient Microsoft hybrid cloud solutions that work for real people in real environments.
+		</p>
+
+		<h2>Core Values</h2>
+		<ul>
+			<li><strong>🪵 Craftsmanship in Tech</strong> – We build hybrid systems with the precision of hand-made work.</li>
+			<li><strong>🛠️ Resilience</strong> – Solutions should be as reliable as the people who depend on them.</li>
+			<li><strong>🌐 Simplicity</strong> – Clear, modular, and supportable—technology should not overcomplicate what’s possible.</li>
+			<li><strong>🌾 Rooted in Community</strong> – We value collaboration, integrity, and purpose in every project.</li>
+		</ul>
+	</TextSection>
+</Layout>
