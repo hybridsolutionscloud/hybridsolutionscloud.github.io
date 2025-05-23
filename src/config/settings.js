@@ -4,5 +4,5 @@ export default {
 	url: `https://www.hybridsolutions.cloud`, // No trailing slash!
 	name: `Hybrid Solutions`, // The short name of the business or brand name. Used for things like the copyright in the footer.
 	enableThemeSwitcher: true,
-	showPlug: true, // Disable this if you want to remove the plug from the footer. (╯°□°)╯︵ ┻━┻
+	showPlug: false, // Disable this if you want to remove the plug from the footer. (╯°□°)╯︵ ┻━┻
 };

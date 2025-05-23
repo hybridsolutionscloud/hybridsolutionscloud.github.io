@@ -3,18 +3,23 @@ import { Button, Container, TextCardSection } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
 
 const seo = {
-	title: 'Get Started using the Astro Odyssey Theme',
-	description: 'Get started on how to setup and use this Astro theme.',
+	title: 'Lost in the Cloud | Hybrid Cloud Solutions, LLC',
+	description: 'Oops — this hybrid workload went offline.',
 };
 ---
 
 <Layout {seo}>
 	<Container>
 		<TextCardSection>
-			<h1>404</h1>
-			<h2>Page Not Found 👀</h2>
+			<h1>404 – Resource Not Found</h1>
+			<h2>This page must’ve failed over to the wrong node. 🔁</h2>
+			<p>
+				Just like a misconfigured Arc policy or a DNS record that wandered off, this page doesn’t seem to exist. 
+				But don’t worry — we’ve got high availability in spirit (if not in routing).
+			</p>
 			<div class="cta-buttons__container">
 				<Button href="/">Return Home</Button>
+				<Button href="/company/contact" outlined>Report This Glitch</Button>
 			</div>
 		</TextCardSection>
 	</Container>
@@ -26,15 +31,6 @@ const seo = {
 		flex-wrap: wrap;
 	}
 	.cta-buttons__container :global(a) {
-		margin-right: 1rem;
-		margin-bottom: 1rem;
-	}
-	.code-buttons__container {
-		margin: 1rem auto;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.code-buttons__container > a {
 		margin-right: 1rem;
 		margin-bottom: 1rem;
 	}
