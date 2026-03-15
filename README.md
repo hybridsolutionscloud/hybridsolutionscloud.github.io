@@ -28,6 +28,7 @@ npm run build
 ## License
 
 See [LICENSE.md](./LICENSE.md) for details.
+
 - ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
 - ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
 - ✅ Generation of **project sitemap** based on your routes.
