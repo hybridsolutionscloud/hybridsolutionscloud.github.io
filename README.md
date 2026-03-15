@@ -1,14 +1,33 @@
-# 🚀 AstroWind
+# Hybrid Cloud Solutions, LLC
 
-<img src="https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
+Website for [Hybrid Cloud Solutions, LLC](https://hybridsolutionscloud.github.io) — founded by Microsoft MVP and MCT Kristopher Turner.
 
-🌟 _Most *starred* & *forked* Astro theme in 2022, 2023 & 2024_. 🌟
+## About
 
-**AstroWind** is a free and open-source template to make your website using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+Hybrid Cloud Solutions helps organizations modernize with confidence using Microsoft hybrid cloud technologies including Azure Local, Azure Arc, Hyper-V, Azure Virtual Desktop, and more.
 
-- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+## Tech Stack
+
+- [Astro](https://astro.build/) — Static site framework
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS
+- Deployed via GitHub Pages
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## License
+
+See [LICENSE.md](./LICENSE.md) for details.
 - ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
 - ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
 - ✅ Generation of **project sitemap** based on your routes.

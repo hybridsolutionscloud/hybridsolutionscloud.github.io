@@ -10,6 +10,8 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Note from '~/components/widgets/Note.astro';
 
+import hybridHeroImg from '~/assets/images/hybrid-hero.jpg';
+
 const metadata = {
   title: 'Hybrid Cloud Made Simple | Hybrid Cloud Solutions, LLC',
   ignoreTitleTemplate: true,
@@ -29,7 +31,7 @@ const metadata = {
       },
       { text: 'Our Services', href: '/services' },
     ]}
-    image={{ src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', alt: 'Hybrid Cloud Architecture — Bridging Ground and Cloud' }}
+    image={{ src: hybridHeroImg, alt: 'Hybrid Cloud Solutions — Hybrid Cloud Architecture' }}
   >
     <Fragment slot="title">
       Hybrid Cloud <span class="text-accent dark:text-white">Made Simple</span>
