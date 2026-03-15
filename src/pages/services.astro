@@ -1,0 +1,158 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="Microsoft Hybrid Cloud Consulting"
+    subtitle="We design, deploy, and manage hybrid cloud solutions using Microsoft technologies. Whether you're modernizing a datacenter, extending Azure to the edge, or building resilient on-prem infrastructure — we've got you covered."
+    actions={[{ variant: 'primary', text: 'Request a Consultation', href: '/contact' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hybrid Cloud Services',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our Core Service Areas"
+    subtitle="Practical, resilient Microsoft hybrid cloud solutions tailored to your environment."
+    columns={3}
+    items={[
+      {
+        title: 'Azure Local Deployments',
+        description:
+          'End-to-end Azure Local (Azure Stack HCI) planning, deployment, and lifecycle management. Hyperconverged infrastructure that brings Azure services to your datacenter.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Azure Arc Enablement & Governance',
+        description:
+          'Extend Azure management, policy, and security to any infrastructure. Manage servers, Kubernetes clusters, and data services across hybrid and multi-cloud environments.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Hyper-V Cluster Design',
+        description:
+          'Architect and implement highly available Hyper-V clusters with Storage Spaces Direct (S2D), live migration, and failover clustering for mission-critical workloads.',
+        icon: 'tabler:stack-2',
+      },
+      {
+        title: 'Storage Spaces Direct (S2D)',
+        description:
+          'Software-defined storage solutions that deliver enterprise-grade performance and resiliency using industry-standard servers and drives.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Hybrid Cloud Architecture',
+        description:
+          'Comprehensive architecture and consulting that blends on-premises infrastructure with Azure cloud services — designed for your workloads, your way.',
+        icon: 'tabler:cloud-computing',
+      },
+      {
+        title: 'Edge & Remote Site Solutions',
+        description:
+          'Purpose-built hybrid deployments for branch offices, remote sites, and edge locations where connectivity, latency, and sovereignty matter most.',
+        icon: 'tabler:antenna-bars-5',
+      },
+      {
+        title: 'Automation & Infrastructure as Code',
+        description:
+          'Azure Automation, PowerShell DSC, ARM/Bicep templates, and Azure Policy to keep your hybrid environment consistent, compliant, and repeatable.',
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: 'Migration & Modernization',
+        description:
+          'Assess, plan, and execute workload migrations from legacy infrastructure to modern hybrid platforms — minimizing risk and downtime.',
+        icon: 'tabler:transfer',
+      },
+      {
+        title: 'Training & Enablement',
+        description:
+          'Hands-on workshops and tailored training programs to upskill your team on Microsoft hybrid cloud technologies. Learn more on our Training page.',
+        icon: 'tabler:school',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Assessment & Discovery',
+        description:
+          'We evaluate your current infrastructure, identify pain points, and map out a clear path to hybrid cloud modernization.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Architecture & Design',
+        description:
+          'Purpose-built solutions architected for your specific workloads, compliance requirements, and operational needs.',
+        icon: 'tabler:ruler-2',
+      },
+      {
+        title: 'Implementation & Deployment',
+        description:
+          'Hands-on delivery with meticulous attention to detail — validated, documented, and built to last.',
+        icon: 'tabler:hammer',
+      },
+      {
+        title: 'Ongoing Support & Optimization',
+        description:
+          'Post-deployment guidance, monitoring recommendations, and continuous improvement to keep your environment healthy.',
+        icon: 'tabler:heart-handshake',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Consulting engagement',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">How We Deliver</h3>
+      Every engagement follows a proven process — from discovery through deployment and beyond.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: "Let's Design Your Solution",
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to modernize your infrastructure?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Tell us about your environment and goals — we'll build a hybrid cloud solution that works for you.
+    </Fragment>
+  </CallToAction>
+</Layout>

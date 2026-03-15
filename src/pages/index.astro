@@ -1,119 +1,217 @@
 ---
-import { Icon } from 'astro-icon/components';
-import {
-	AnnouncementBar,
-	Button,
-	CustomerQuoteSection,
-	ThreeColumnTextSection,
-	StickyTextImageSection,
-	CtaCardSection,
-} from '@components/odyssey-theme';
-import Layout from '../layouts/Page.astro';
-import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import Layout from '~/layouts/PageLayout.astro';
 
-const seo = {
-	title: 'Hybrid Cloud Made Simple | Hybrid Cloud Solutions, LLC',
-	description: 'Microsoft hybrid cloud expertise for Azure Stack HCI, Hyper-V, Azure Arc, and edge modernization.',
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'Hybrid Cloud Made Simple | Hybrid Cloud Solutions, LLC',
+  ignoreTitleTemplate: true,
 };
 ---
 
-<AnnouncementBar
-	text="Hybrid Cloud Solutions, LLC is now live — contact us to modernize your infrastructure."
-	href="/company/contact"
-	slot="announcement-bar"
-/>
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
 
-<Layout {seo}>
-	<TextAndImageHero reversed>
-		<div slot="text-container">
-			<h1>Hybrid Cloud Made Simple</h1>
-			<p>
-				From Azure Local to Hyper-V and Azure Arc — grounded, resilient hybrid cloud solutions designed for the edge and the enterprise.
-			</p>
-		</div>
-		<div slot="btns-container">
-			<Button href="/company/contact" customIcon>
-				Schedule a Consult
-				<Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment>
-			</Button>
-		</div>
-		<picture slot="image-container">
-			<img
-				src="/assets/images/hybrid-hero.jpg"
-				alt="Hybrid Cloud Architecture Diagram"
-				id="home-hero-image"
-			/>
-		</picture>
-	</TextAndImageHero>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Consult',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+      { text: 'Our Services', href: '/services' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Hybrid Cloud Architecture' }}
+  >
+    <Fragment slot="title">
+      Hybrid Cloud <span class="text-accent dark:text-white">Made Simple</span>
+    </Fragment>
 
-	<CustomerQuoteSection
-		quoteText="Working with Hybrid Cloud Solutions was a game-changer. Their knowledge of Azure Arc and on-prem infrastructure helped us move faster without compromising on governance."
-		customerName="— Enterprise Infrastructure Lead"
-	/>
+    <Fragment slot="subtitle">
+      From Azure Local to Hyper-V and Azure Arc — grounded, resilient hybrid cloud solutions designed for the edge and the enterprise.
+      <span class="font-semibold">Hybrid Cloud Solutions, LLC</span> helps organizations modernize with confidence using Microsoft technologies.
+    </Fragment>
+  </Hero>
 
-	<ThreeColumnTextSection>
-		<div slot="column-1-body">
-			<h2>Why Hybrid?</h2>
-			<p>
-				Not every workload belongs in the public cloud. We help you modernize on your own terms — blending Azure capabilities with resilient on-prem infrastructure.
-			</p>
-		</div>
-		<Button slot="column-1-cta" href="/company/about">Learn More</Button>
+  <!-- Note Widget ******************* -->
 
-		<div slot="column-2-body">
-			<h2>How We Help</h2>
-			<p>
-				From Azure Local to Hyper-V clusters and Azure Arc governance — we design and deliver practical solutions rooted in real-world experience.
-			</p>
-		</div>
-		<Button slot="column-2-cta" href="/company/contact" outlined>Contact Us</Button>
+  <Note
+    title="Microsoft MVP & MCT-Led Consulting:"
+    description="Real-world hybrid cloud expertise backed by recognized community leadership and Microsoft Certified Trainer credentials."
+  />
 
-		<div slot="column-3-body">
-			<h2>What We Deliver</h2>
-			<p>
-				Azure Local deployments, Storage Spaces Direct, Azure Arc Services, and hybrid cloud automation — tailored for your unique infrastructure.
-			</p>
-		</div>
-		<Button slot="column-3-cta" href="/services">Explore Services</Button>
-	</ThreeColumnTextSection>
+  <!-- Features Widget *************** -->
 
-	<StickyTextImageSection>
-		<div slot="text-container">
-			<h2>What Makes Us Different</h2>
-			<h3>Microsoft MVP Expertise</h3>
-			<p>
-				With recognized leadership in the Azure Hybrid community, we bring insights from the front lines of Microsoft’s hybrid ecosystem.
-			</p>
-			<h3>Craftsmanship Meets Cloud</h3>
-			<p>
-				We approach cloud architecture with the same care you'd find in a woodshop — patient, precise, and purpose-driven.
-			</p>
-			<h3>Edge-Ready Solutions</h3>
-			<p>
-				We specialize in remote site deployments, secure automation, and Azure services that run on your terms — anywhere.
-			</p>
-		</div>
-		<picture slot="image-container">
-			<img
-				src="/assets/images/features-hybrid.jpg"
-				alt="Azure Hybrid Features"
-				loading="lazy"
-			/>
-		</picture>
-	</StickyTextImageSection>
+  <Features
+    id="services"
+    tagline="What We Do"
+    title="Hybrid Cloud Services"
+    subtitle="We specialize in designing, deploying, and managing Microsoft hybrid cloud infrastructure — bridging your datacenter and the cloud."
+    items={[
+      {
+        title: 'Azure Local (Azure Stack HCI)',
+        description:
+          'Deploy and manage hyperconverged infrastructure with Azure Local — bringing Azure services to your on-premises environment.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Azure Arc Enablement',
+        description:
+          'Extend Azure governance, security, and management to any infrastructure — on-premises, edge, or multi-cloud.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Hyper-V Cluster Design',
+        description:
+          'Design and implement resilient Hyper-V clusters with Storage Spaces Direct for high availability and performance.',
+        icon: 'tabler:stack-2',
+      },
+      {
+        title: 'Edge & Remote Site Solutions',
+        description:
+          'Purpose-built hybrid solutions for remote offices, branch locations, and edge environments where connectivity matters.',
+        icon: 'tabler:antenna-bars-5',
+      },
+      {
+        title: 'Hybrid Cloud Architecture',
+        description:
+          'End-to-end architecture and consulting for organizations blending on-premises infrastructure with Azure cloud services.',
+        icon: 'tabler:cloud-computing',
+      },
+      {
+        title: 'Automation & Governance',
+        description:
+          'Azure Policy, Azure Automation, and infrastructure-as-code to keep your hybrid environment consistent and compliant.',
+        icon: 'tabler:settings-automation',
+      },
+    ]}
+  />
 
-	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-		<h2>Ready to Build Your Hybrid Cloud?</h2>
-		<p>
-			Let’s design a solution that blends the best of Azure with the infrastructure you trust.
-		</p>
-		<Button href="/company/contact" customIcon>
-			Get Started
-			<Fragment slot="icon">
-				<Icon name="ic:baseline-chevron-right" />
-			</Fragment>
-		</Button>
-	</CtaCardSection>
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Why Hybrid?"
+    title="Not every workload belongs in the public cloud"
+    items={[
+      {
+        title: 'Microsoft MVP & MCT',
+        description:
+          'Microsoft MVP in Azure and Microsoft Certified Trainer — insights from 30+ conference sessions and real production deployments.',
+      },
+      {
+        title: 'Craftsmanship Meets Cloud',
+        description:
+          'We approach cloud architecture with the same care you\'d find in a woodshop — patient, precise, and purpose-driven.',
+      },
+      {
+        title: 'Edge-Ready Solutions',
+        description:
+          'We specialize in remote site deployments, secure automation, and Azure services that run on your terms — anywhere.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Server Room Infrastructure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Makes Us Different</h3>
+      We help you modernize on your own terms — blending Azure capabilities with resilient on-prem infrastructure.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="How We Work"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Discovery</span>',
+        description:
+          'We start by understanding your current infrastructure, business requirements, and goals. No cookie-cutter assessments — we dig into what makes your environment unique.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Design</span>',
+        description:
+          'We architect a solution tailored to your needs — selecting the right mix of Azure Local, Azure Arc, Hyper-V, and cloud services for your workloads.',
+        icon: 'tabler:ruler-2',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Deploy</span>',
+        description:
+          'Hands-on implementation with careful attention to detail. We build it right the first time — tested, validated, and documented.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Ongoing Support',
+        icon: 'tabler:check',
+        description:
+          'We don\'t disappear after deployment. We offer continued guidance, training, and support to keep your hybrid cloud running strong.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Consulting Process',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="What Our Clients Say"
+    testimonials={[
+      {
+        testimonial:
+          'Working with Hybrid Cloud Solutions was a game-changer. Their knowledge of Azure Arc and on-prem infrastructure helped us move faster without compromising on governance.',
+        name: 'Enterprise Infrastructure Lead',
+        job: 'Public Sector Organization',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Microsoft Technologies', amount: '10+' },
+      { title: 'Years of Experience', amount: '15+' },
+      { title: 'Azure & Hybrid Focus', amount: '100%' },
+      { title: 'MVP Recognition', amount: '✓' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Build Your Hybrid Cloud?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Let's design a solution that blends the best of Azure with the infrastructure you trust.
+    </Fragment>
+  </CallToAction>
 </Layout>

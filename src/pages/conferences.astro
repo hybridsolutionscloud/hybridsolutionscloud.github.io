@@ -1,0 +1,276 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Conferences & Speaking',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Speaking & Events"
+    title="Conferences & Speaking Engagements"
+    subtitle="Microsoft MVP and MCT Kristopher Turner is a sought-after speaker at industry conferences, community events, and user groups — sharing real-world insights on hybrid cloud, Azure Local, Azure Arc, AVD, and edge infrastructure."
+    actions={[
+      { variant: 'primary', text: 'Invite Me to Speak', href: '/contact', icon: 'tabler:microphone' },
+      { variant: 'secondary', text: 'View Sessionize Profile', href: 'https://sessionize.com/kristopherjturner/', target: '_blank' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Conference Stage',
+    }}
+  />
+
+  <!-- Features Widget - Featured Sessions *************** -->
+
+  <Features
+    tagline="Featured Sessions"
+    title="What I Speak About"
+    subtitle="Sessions are designed for IT professionals, infrastructure architects, and decision-makers navigating the hybrid cloud landscape. All topics include real demos and production-tested guidance."
+    items={[
+      {
+        title: 'Breaking Free from VMware: Your Azure Local & Hyper-V Migration Path',
+        description:
+          'Discover how Azure Local and Hyper-V provide a compelling, cost-effective alternative to VMware. Migration strategies, performance benchmarks, HA, DR, and Azure Arc integration.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Arc of Power: Managing and Securing Multi-Cloud with Azure Arc',
+        description:
+          'How Azure Arc provides a unified approach to managing and securing resources across Azure, AWS, Google Cloud, and on-premises with Azure Policy, Update Manager, and Defender for Cloud.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'AVD Anywhere: Azure Virtual Desktop on Azure Local Without Losing Your Mind',
+        description:
+          'Hybrid AVD architecture, image builds, FSLogix tuning, GPU placement, identity flow, networking constraints, and the "haunted host pool" failures everyone eventually hits.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'The Hybrid Update Blues: Orchestrating Patches Across Hybrid Environments',
+        description:
+          'Orchestrating patching across Azure Local, Hyper-V clusters, standalone servers, Arc-managed machines, and Azure VMs — without turning your environment into a brick collection.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'AI at the Edge: Running Real Workloads on Azure Local',
+        description:
+          'How to deploy AI models, vector search, and ML pipelines on Azure Local — GPU placement, data gravity, Arc machine learning extensions, and edge-optimized design patterns.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Automating AVD Deployment with VS Code and GitHub Copilot',
+        description:
+          'Live demo on automating Azure Virtual Desktop deployments to Azure and Azure Local using GitHub Copilot and VS Code. AI-assisted Infrastructure as Code for hybrid AVD rollouts.',
+        icon: 'tabler:robot',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget - All Session Topics *************** -->
+
+  <Features2
+    tagline="Full Catalog"
+    title="Session Topics"
+    subtitle="30+ sessions available across these core areas — from deep-dive technical workshops to executive overviews."
+    items={[
+      {
+        title: 'Azure Local / Azure Stack HCI',
+        description: 'Deploy, manage, migrate from Hyper-V or VMware. Staying sane while staying on-prem.',
+        icon: 'tabler:server-2',
+      },
+      {
+        title: 'Azure Arc & Multi-Cloud Governance',
+        description: 'Policy enforcement, update orchestration, and security across clouds and on-premises.',
+        icon: 'tabler:cloud-lock',
+      },
+      {
+        title: 'Azure Virtual Desktop & Windows 365',
+        description: 'What\'s new, lessons from the field, hybrid AVD architecture, and on-prem AVD deployment.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Azure Monitor & Operations Center',
+        description: 'Migration strategies from legacy monitoring. One console to manage them all.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Azure Migrate & DR with ASR',
+        description: 'Workload migration strategies and disaster recovery with Azure Site Recovery.',
+        icon: 'tabler:transfer',
+      },
+      {
+        title: 'Microsoft Licensing & Investments',
+        description: 'Navigating MCA, CSP, MACC, ESU, Unified Support, and optimizing costs.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Kubernetes on Azure & Azure Stack',
+        description: 'AKS, hybrid K8s, containers on Azure Stack, and cloud-native hybrid app patterns.',
+        icon: 'tabler:hexagons',
+      },
+      {
+        title: 'Identity & Security',
+        description: 'Entra Permissions Management, Defender for Cloud, securing hybrid and multi-cloud systems.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'AI-Driven Infrastructure as Code',
+        description: 'From experiment to enterprise — AI-driven IaC journeys with VS Code and GitHub Copilot.',
+        icon: 'tabler:code',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Content Widget - Past Events **************** -->
+
+  <Content
+    tagline="Past Events"
+    title="Recent Speaking Engagements"
+    items={[
+      {
+        title: 'North American Cloud & Collaboration Summit — Branson, MO (Jul 2025)',
+        description:
+          'From Experiment to Enterprise: My AI-Driven IaC Journey with VS Code and GitHub Copilot',
+      },
+      {
+        title: 'MMS 2025 at MOA — Minneapolis, MN (May 2025)',
+        description:
+          'Windows Server or Azure Local: The On-Prem Question',
+      },
+      {
+        title: 'M365 Community Days DC — Arlington, VA (Feb 2025)',
+        description:
+          'Securing Hybrid Workloads with Azure Arc: A Unified Approach to Governance and Compliance',
+      },
+      {
+        title: 'MC2MC Connect 2025 — Berchem, Belgium (Feb 2025)',
+        description:
+          'Arc of Control: Managing Multi-Cloud Servers with Azure Arc, Policy, and Update Manager',
+      },
+      {
+        title: 'MMS 2025 Music City Edition — Nashville, TN (Oct 2025)',
+        description:
+          'Multiple sessions on Azure Local, AVD, and hybrid cloud management',
+      },
+      {
+        title: 'M365 Community Days NYC — Manhattan, NY (Jul 2025)',
+        description:
+          'Azure Arc and hybrid cloud governance sessions',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Speaking at a conference',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Where I've Been</h3>
+      From MMS and M365 Community Days to Experts Live Europe and Festive Tech Calendar — active in the hybrid cloud community year-round since 2018.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget - Event History **************** -->
+
+  <Content
+    isReversed
+    title="Conference History"
+    items={[
+      {
+        title: 'MMS (Midwest Management Summit)',
+        description:
+          'Regular speaker at MMS MOA and MMS Music City Edition — Minneapolis, Nashville.',
+      },
+      {
+        title: 'M365 Community Days',
+        description:
+          'NYC, DC, Nashville — community-driven Microsoft 365 and Azure events.',
+      },
+      {
+        title: 'Experts Live Europe',
+        description:
+          'International speaking at Experts Live Europe 2019 in Prague, Czechia.',
+      },
+      {
+        title: 'Festive Tech Calendar',
+        description:
+          'Annual contributor to the Festive Tech Calendar — 2022, 2023, and 2024 editions.',
+      },
+      {
+        title: 'MVPDays',
+        description:
+          'Multiple sessions at MVPDays Online and Azure Stack Day events since 2018.',
+      },
+      {
+        title: 'User Groups',
+        description:
+          'DFWSMUG (Dallas), HASMUG (Houston), and regional user group presentations.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Past Events',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A Global Track Record</h3>
+      Speaking at events across the US and Europe — from intimate user groups to large multi-day conferences.
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Speaking by the Numbers"
+    stats={[
+      { title: 'Unique Sessions', amount: '30+' },
+      { title: 'Events & Conferences', amount: '15+' },
+      { title: 'Years Speaking', amount: '7+' },
+      { title: 'Countries', amount: '3+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Invite Me to Speak',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+      {
+        variant: 'secondary',
+        text: 'View Full Profile on run.events',
+        href: 'https://speakers.run.events/kristopherjturner',
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Want Me at Your Event?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      I'm available for conference keynotes, breakout sessions, panel discussions, user group talks, and hands-on workshop facilitation. Let's make it happen.
+    </Fragment>
+  </CallToAction>
+</Layout>

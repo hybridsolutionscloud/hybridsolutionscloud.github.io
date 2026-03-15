@@ -1,0 +1,207 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Training',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Training"
+    title="Hybrid Cloud Training & Workshops"
+    subtitle="Hands-on, instructor-led training programs designed to upskill your team on Microsoft hybrid cloud technologies. From Azure Local to Azure Arc — learn from a Microsoft MVP and Microsoft Certified Trainer (MCT) with real-world deployment experience."
+    actions={[{ variant: 'primary', text: 'Request a Training Session', href: '/contact', icon: 'tabler:calendar' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Training Workshop',
+    }}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    tagline="Curriculum"
+    title="Training Topics"
+    subtitle="Courses tailored to IT professionals, infrastructure teams, and decision-makers looking to master Microsoft hybrid cloud technologies."
+    items={[
+      {
+        title: 'Azure Local Hands-On Lab',
+        description:
+          'Deploy and manage Azure Local (Azure Stack HCI) from scratch. Covers cluster creation, storage configuration, VM management, and Azure integration.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Hyper-V Administration Deep Dive',
+        description:
+          'Advanced Hyper-V management — failover clustering, live migration, Storage Spaces Direct, networking, and performance tuning.',
+        icon: 'tabler:stack-2',
+      },
+      {
+        title: 'Azure Arc for IT Pros',
+        description:
+          'Extend Azure governance to any infrastructure. Hands-on with Arc-enabled servers, Kubernetes, policy enforcement, and monitoring.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Hybrid Cloud Architecture Workshop',
+        description:
+          'Design hybrid solutions that balance on-prem control with cloud agility. Covers reference architectures, decision frameworks, and best practices.',
+        icon: 'tabler:cloud-computing',
+      },
+      {
+        title: 'Custom Corporate Training',
+        description:
+          'Tailored programs built around your team\'s specific environment, skill gaps, and business objectives. On-site or virtual delivery.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'PowerShell & Automation',
+        description:
+          'Infrastructure-as-code, Azure Automation, PowerShell DSC, and scripting best practices for hybrid cloud environments.',
+        icon: 'tabler:terminal-2',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Delivery Options"
+    title="Flexible Training Formats"
+    items={[
+      {
+        title: 'In-Person Workshops',
+        description: 'On-site, hands-on training at your facility. Ideal for team-building and immersive learning.',
+      },
+      {
+        title: 'Virtual Instructor-Led',
+        description: 'Live, interactive sessions delivered remotely. Same quality instruction with the flexibility of remote participation.',
+      },
+      {
+        title: 'Conference Sessions',
+        description: 'Breakout sessions and workshops delivered at industry conferences and community events.',
+      },
+      {
+        title: 'Custom Engagements',
+        description: 'Training programs designed around your specific environment, technology stack, and team goals.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Training delivery',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Learn Your Way</h3>
+      We deliver training in the format that works best for your team and schedule.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="How Training Works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Assess Needs</span>',
+        description:
+          'We discuss your team\'s current skill level, technology environment, and learning objectives to design the right curriculum.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Schedule & Prepare</span>',
+        description:
+          'We coordinate dates, set up lab environments, and prepare materials tailored to your specific scenarios.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Deliver</span>',
+        description:
+          'Instructor-led sessions with hands-on labs, real-world scenarios, and plenty of time for questions and deep dives.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Follow Up',
+        icon: 'tabler:check',
+        description:
+          'Post-training resources, documentation, and continued access to support as your team applies what they\'ve learned.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Training process',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Training FAQs"
+    subtitle="Common questions about our training programs."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What group sizes do you support?',
+        description:
+          'We work with groups of any size — from small teams of 3-5 to larger departments of 20+. Content and pacing are adjusted accordingly.',
+      },
+      {
+        title: 'Are there prerequisites?',
+        description:
+          'It depends on the course. Basic IT infrastructure knowledge is generally expected. We\'ll help you assess readiness during the planning phase.',
+      },
+      {
+        title: 'Do participants receive certificates?',
+        description:
+          'Yes — participants receive a certificate of completion for each training program. These are not Microsoft certifications, but validate the skills covered.',
+      },
+      {
+        title: 'Can training be customized to our environment?',
+        description:
+          'Absolutely. Custom corporate training is built around your specific infrastructure, tools, and objectives. We can use your actual environment for labs.',
+      },
+      {
+        title: 'What about pricing?',
+        description:
+          'Training pricing varies by format, duration, group size, and customization. Contact us for a tailored quote.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Training Session',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Upskill Your Team?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Get in touch to discuss your training needs and we'll build a program that fits.
+    </Fragment>
+  </CallToAction>
+</Layout>

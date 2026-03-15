@@ -1,0 +1,72 @@
+site:
+  name: 'Hybrid Cloud Solutions'
+  site: 'https://www.hybridsolutions.cloud'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: false
+
+# Default SEO metadata
+metadata:
+  title:
+    default: 'Hybrid Cloud Solutions'
+    template: '%s — Hybrid Cloud Solutions'
+  description: 'From Azure Local to Hyper-V and Azure Arc — grounded, resilient hybrid solutions built for the edge and the enterprise.'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: 'Hybrid Cloud Solutions'
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@countrycloudboy'
+    site: '@countrycloudboy'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+    postsPerPage: 6
+
+    post:
+      isEnabled: false
+      permalink: '/%slug%'
+      robots:
+        index: false
+
+    list:
+      isEnabled: false
+      pathname: 'blog'
+      robots:
+        index: false
+
+    category:
+      isEnabled: false
+      pathname: 'category'
+      robots:
+        index: false
+
+    tag:
+      isEnabled: false
+      pathname: 'tag'
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: false
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

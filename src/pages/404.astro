@@ -1,37 +1,24 @@
 ---
-import { Button, Container, TextCardSection } from '@components/odyssey-theme';
-import Layout from '../layouts/Page.astro';
+import Layout from '~/layouts/Layout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
 
-const seo = {
-	title: 'Lost in the Cloud | Hybrid Cloud Solutions, LLC',
-	description: 'Oops — this hybrid workload went offline.',
-};
+const title = `Error 404`;
 ---
 
-<Layout {seo}>
-	<Container>
-		<TextCardSection>
-			<h1>404 – Resource Not Found</h1>
-			<h2>This page must’ve failed over to the wrong node. 🔁</h2>
-			<p>
-				Just like a misconfigured Arc policy or a DNS record that wandered off, this page doesn’t seem to exist. 
-				But don’t worry — we’ve got high availability in spirit (if not in routing).
-			</p>
-			<div class="cta-buttons__container">
-				<Button href="/">Return Home</Button>
-				<Button href="/company/contact" outlined>Report This Glitch</Button>
-			</div>
-		</TextCardSection>
-	</Container>
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">Error</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">This page must've failed over to the wrong node.</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+      </div>
+    </div>
+  </section>
 </Layout>
-
-<style>
-	.cta-buttons__container {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.cta-buttons__container :global(a) {
-		margin-right: 1rem;
-		margin-bottom: 1rem;
-	}
-</style>

@@ -1,0 +1,166 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import kristopherImg from '~/assets/images/kristopher-turner.jpg';
+
+const metadata = {
+  title: 'About',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'About Hybrid Cloud Solutions',
+    }}
+  >
+    <Fragment slot="title">
+      About <span class="text-accent dark:text-white">Hybrid Cloud Solutions</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Founded by Microsoft MVP and Microsoft Certified Trainer (MCT) Kristopher Turner — a Product Technology Architect at TierPoint who focuses on delivering innovative cloud and infrastructure solutions. With expertise spanning Azure Local, Azure Arc, Kubernetes, and disaster recovery with ASR, Kristopher bridges on-premises and cloud technologies to drive digital transformation.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget - Founder Story **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Microsoft MVP & MCT',
+        description:
+          'Microsoft MVP in Azure and a Microsoft Certified Trainer (MCT) — recognized for community leadership and deep technical expertise in hybrid cloud.',
+      },
+      {
+        title: 'Product Technology Architect at TierPoint',
+        description:
+          'Focuses on delivering innovative cloud and infrastructure solutions with expertise in Azure Local, Azure Arc, AKS, ASR, and Azure Monitor.',
+      },
+      {
+        title: 'Castlewood, Virginia',
+        description:
+          'Based in Castlewood, Virginia — bringing a craftsman\'s mindset to everything from cloud architecture to woodworking and slow-smoked Texas-style BBQ.',
+      },
+    ]}
+    image={{
+      src: kristopherImg,
+      alt: 'Kristopher Turner — Microsoft MVP, MCT, Product Technology Architect',
+      width: 400,
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Meet Our Founder</h3>
+      A sought-after speaker and thought leader, Kristopher frequently presents on hybrid architectures, cloud-native technologies, and monitoring solutions at conferences like MMS, M365 Community Days, Experts Live Europe, and Festive Tech Calendar — sharing insights from his extensive experience in modern IT infrastructure.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget - Mission **************** -->
+
+  <Content
+    items={[
+      {
+        title: 'Our Mission',
+        description:
+          'To bridge the gap between cloud and datacenter by delivering practical, resilient Microsoft hybrid cloud solutions that work for real people in real environments.',
+      },
+      {
+        title: 'Our Approach',
+        description:
+          'Hybrid Cloud Solutions, LLC exists to make hybrid cloud simpler, more accessible, and better aligned to each organization\'s needs — whether you\'re modernizing a datacenter, enabling Azure Arc policy at the edge, or deploying resilient Hyper-V clusters with Storage Spaces Direct.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+      alt: 'Technology Vision',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why We Exist</h3>
+      Not every workload belongs in the public cloud. We help you modernize on your own terms.
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget - Core Values *************** -->
+
+  <Features
+    tagline="Values"
+    title="Core Values"
+    subtitle="The principles that guide everything we do."
+    items={[
+      {
+        title: 'Craftsmanship in Tech',
+        description:
+          'We build hybrid systems with the precision of hand-made work. Quality matters in every deployment.',
+        icon: 'tabler:hammer',
+      },
+      {
+        title: 'Resilience',
+        description:
+          'Solutions should be as reliable as the people who depend on them. We design for uptime and survivability.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Simplicity',
+        description:
+          'Clear, modular, and supportable — technology should not overcomplicate what\'s possible.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Rooted in Community',
+        description:
+          'We value collaboration, integrity, and purpose in every project. Giving back is part of who we are.',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="By the Numbers"
+    stats={[
+      { title: 'Years in Tech', amount: '15+' },
+      { title: 'Microsoft MVP & MCT', amount: '✓' },
+      { title: 'Conference Sessions', amount: '30+' },
+      { title: 'Events & User Groups', amount: '15+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Work With Us',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Get Started?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Let's discuss how Hybrid Cloud Solutions can help your organization modernize with confidence.
+    </Fragment>
+  </CallToAction>
+</Layout>

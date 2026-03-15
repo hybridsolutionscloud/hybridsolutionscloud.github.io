@@ -1,0 +1,135 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Community',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Community"
+    title="Join the Hybrid Cloud Community"
+    subtitle="Technology is better when we build it together. Connect with us across platforms — contribute, collaborate, and grow with the hybrid cloud community."
+    actions={[
+      { variant: 'primary', text: 'Follow on YouTube', href: 'https://youtube.com/@countrycloudboy', target: '_blank', icon: 'tabler:brand-youtube' },
+      { text: 'GitHub', href: 'https://github.com/hybridsolutionscloud', target: '_blank' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Community Collaboration',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Where to Find Us"
+    subtitle="Connect with Hybrid Cloud Solutions across these platforms."
+    columns={3}
+    items={[
+      {
+        title: 'YouTube',
+        description:
+          'Tech content, demos, walkthroughs, and conference recordings on the @countrycloudboy channel. Subscribe for hybrid cloud insights.',
+        icon: 'tabler:brand-youtube',
+      },
+      {
+        title: 'GitHub',
+        description:
+          'Open source projects, scripts, templates, and community contributions. Star, fork, and collaborate with us.',
+        icon: 'tabler:brand-github',
+      },
+      {
+        title: 'X (Twitter)',
+        description:
+          'Industry commentary, quick tips, event updates, and community engagement. Follow @countrycloudboy for real-time updates.',
+        icon: 'tabler:brand-x',
+      },
+      {
+        title: 'User Groups',
+        description:
+          'Active participation in local and virtual Azure user groups, hybrid cloud meetups, and Microsoft community events.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Conferences',
+        description:
+          'Regular speaker at industry conferences and community events. Check our Conferences page for upcoming appearances.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Open Source',
+        description:
+          'We believe in giving back. Community scripts, tools, and shared knowledge make everyone stronger.',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    tagline="Philosophy"
+    title="Rooted in Community"
+    isReversed
+    items={[
+      {
+        title: 'Knowledge Sharing',
+        description:
+          'From YouTube videos to conference talks to open source contributions — we believe in sharing what we learn.',
+      },
+      {
+        title: 'Collaboration Over Competition',
+        description:
+          'The hybrid cloud space is better when professionals help each other. We actively mentor, contribute, and collaborate.',
+      },
+      {
+        title: 'Giving Back',
+        description:
+          'As a Microsoft MVP, community engagement isn\'t just a title — it\'s a commitment to helping others succeed with technology.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Community Spirit',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built on Integrity</h3>
+      We value collaboration, integrity, and purpose in every project and every interaction.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get In Touch',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Want to Collaborate?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Whether it's a community project, a speaking opportunity, or just a conversation about hybrid cloud — reach out.
+    </Fragment>
+  </CallToAction>
+</Layout>

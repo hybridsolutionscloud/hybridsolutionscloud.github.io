@@ -1,0 +1,84 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Get In Touch" title="Let's Build Something Together" subtitle="Whether you need hybrid cloud consulting, training, or a conference speaker — we'd love to hear from you." />
+
+  <ContactUs
+    id="form"
+    title="Send Us a Message"
+    subtitle="Fill out the form below and we'll get back to you within one business day."
+    action="https://submit-form.com/tJdRWGIgc"
+    method="POST"
+    inputs={[
+      {
+        type: 'hidden',
+        name: '_redirect',
+        placeholder: 'https://www.hybridsolutions.cloud/thanks',
+      },
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+        placeholder: 'Your name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'your.email@example.com',
+      },
+      {
+        type: 'text',
+        name: 'subject',
+        label: 'Subject',
+        placeholder: 'How can we help?',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+      name: 'message',
+      placeholder: 'Tell us about your project or question...',
+      rows: 6,
+    }}
+    disclaimer={{
+      label:
+        'By submitting this form, you acknowledge and agree to our collection of your personal information as described in our Privacy Policy.',
+    }}
+    button="Send Message"
+    description="We typically respond within one business day."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Other Ways to Reach Us"
+    items={[
+      {
+        title: 'Email',
+        description: 'contact@hybridsolutions.cloud',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Social',
+        description: 'Follow us @countrycloudboy on X and YouTube',
+        icon: 'tabler:brand-x',
+      },
+      {
+        title: 'Based In',
+        description: 'Western Virginia, USA — serving clients nationwide',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
