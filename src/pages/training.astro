@@ -8,6 +8,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 
+import kristopherTrainingImg from '~/assets/images/kristopher-training.jpeg';
+
 const metadata = {
   title: 'Training',
 };
@@ -22,8 +24,8 @@ const metadata = {
     subtitle="Hands-on, instructor-led training programs designed to upskill your team on Microsoft hybrid cloud technologies. From Azure Local to Azure Arc — learn from a Microsoft MVP and Microsoft Certified Trainer (MCT) with real-world deployment experience."
     actions={[{ variant: 'primary', text: 'Request a Training Session', href: '/contact', icon: 'tabler:calendar' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Training Workshop',
+      src: kristopherTrainingImg,
+      alt: 'Kristopher Turner leading a training session',
     }}
   />
 
