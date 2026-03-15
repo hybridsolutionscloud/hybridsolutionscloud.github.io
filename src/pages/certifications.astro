@@ -1,0 +1,263 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Certifications & Credentials',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Credentials"
+    title="Microsoft Certifications & Exams"
+    subtitle="Kristopher Turner holds 8 active Microsoft certifications across Azure architecture, security, hybrid infrastructure, and identity — backed by 16 passed exams and over 15 years of hands-on experience."
+    actions={[{ variant: 'primary', text: 'Work With Us', href: '/contact', icon: 'tabler:arrow-right' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Microsoft Certifications',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Certification Overview"
+    stats={[
+      { title: 'Active Certifications', amount: '8' },
+      { title: 'Exams Passed', amount: '16' },
+      { title: 'Modules Completed', amount: '49' },
+      { title: 'Training Hours', amount: '37+' },
+    ]}
+  />
+
+  <!-- Active Certifications - Expert & Associate Level **************** -->
+
+  <Features
+    id="active-certs"
+    tagline="Active Certifications"
+    title="Expert & Associate Level"
+    subtitle="Role-based certifications demonstrating advanced proficiency in Azure architecture, security, and hybrid infrastructure."
+    columns={2}
+    items={[
+      {
+        title: 'Azure Solutions Architect Expert',
+        description: 'Cert #DDFEG0-241C1D — Earned Jun 2020 · Expires Sep 2026. Expertise in designing cloud and hybrid solutions on Microsoft Azure.',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Azure Security Engineer Associate',
+        description: 'Cert #F7A9V3-7DE2F5 — Earned Oct 2022 · Expires Oct 2026. Implements security controls, manages identity and access, and protects data and applications in Azure.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Security Operations Analyst Associate',
+        description: 'Cert #81Y1EA-646F83 — Earned Apr 2023 · Expires Apr 2026. Investigates, responds to, and hunts for threats using Microsoft Sentinel and Microsoft Defender.',
+        icon: 'tabler:radar-2',
+      },
+      {
+        title: 'Windows Server Hybrid Administrator Associate',
+        description: 'Cert #Z0E8B6-2268E7 — Earned Nov 2022 · Expires Nov 2026. Configures and manages Windows Server on-premises, hybrid, and IaaS workloads.',
+        icon: 'tabler:server',
+      },
+    ]}
+  />
+
+  <!-- Active Certifications - Fundamentals & Legacy **************** -->
+
+  <Features
+    tagline="Active Certifications"
+    title="Fundamentals & Specialist"
+    subtitle="Foundation-level and specialist certifications that do not expire."
+    columns={2}
+    items={[
+      {
+        title: 'Security, Compliance, and Identity Fundamentals',
+        description: 'Cert #C5CCWC-3E5DB4 — Earned Oct 2022 · No Expiration. Foundational knowledge of security, compliance, and identity across Microsoft services.',
+        icon: 'tabler:fingerprint',
+      },
+      {
+        title: 'Azure Fundamentals',
+        description: 'Cert #993F6W-D6D503 — Earned Apr 2019 · No Expiration. Foundational understanding of Azure cloud concepts, services, and management tools.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'MCTS: System Center 2012 Configuration Manager',
+        description: 'Cert #7899C6-40F1F6 — Earned Jul 2013 · No Expiration. Administering and deploying System Center 2012 Configuration Manager.',
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: 'Microsoft Certified Professional',
+        description: 'Cert #C2214C-3DC7BJ — Earned Apr 2012 · No Expiration. Foundation certification validating core IT professional skills.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Passed Exams **************** -->
+
+  <Features2
+    tagline="Exam History"
+    title="Passed Exams"
+    subtitle="16 exams passed spanning Azure architecture, security, hybrid infrastructure, and systems management."
+    columns={3}
+    items={[
+      {
+        title: 'SC-200',
+        description: 'Microsoft Security Operations Analyst — Apr 2023',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-140',
+        description: 'Configuring and Operating Microsoft Azure Virtual Desktop — Jan 2023',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-801',
+        description: 'Configuring Windows Server Hybrid Advanced Services — Nov 2022',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-800',
+        description: 'Administering Windows Server Hybrid Core Infrastructure — Nov 2022',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-500',
+        description: 'Microsoft Azure Security Technologies — Oct 2022',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'SC-900',
+        description: 'Microsoft Security, Compliance, and Identity Fundamentals — Oct 2022',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-305',
+        description: 'Designing Microsoft Azure Infrastructure Solutions — Sep 2022',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-600',
+        description: 'Configuring and Operating a Hybrid Cloud with Azure Stack Hub — Jan 2021',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-300',
+        description: 'Microsoft Azure Architect Technologies — Jun 2020',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-301',
+        description: 'Microsoft Azure Architect Design — Jun 2020',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-100',
+        description: 'Microsoft Azure Infrastructure and Deployment — May 2019',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'AZ-900',
+        description: 'Microsoft Azure Fundamentals — Apr 2019',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Exam 537',
+        description: 'Configuring and Operating a Hybrid Cloud with Azure Stack — Jun 2018',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Exam 243',
+        description: 'TS: Administering and Deploying System Center 2012 Configuration Manager — Jul 2013',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Exam 681',
+        description: 'TS: Windows 7 and Office 2010, Deploying — Apr 2012',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Exam 401',
+        description: 'Microsoft System Center Configuration Manager 2007, Configuring — Dec 2011',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <!-- Historical Certifications **************** -->
+
+  <Features
+    tagline="Historical"
+    title="Historical Certifications"
+    subtitle="Previously held certifications — expired or retired. These represent the breadth of Kristopher's career in Microsoft technologies."
+    columns={2}
+    items={[
+      {
+        title: 'Azure Virtual Desktop Specialty',
+        description: 'Cert #272CA1-55VB44 — Earned Jan 2023 · Expired Jan 2026.',
+        icon: 'tabler:clock-off',
+      },
+      {
+        title: 'Azure Stack Hub Operator Associate',
+        description: 'Cert #9AACAC-YA65F6 — Earned Mar 2021 · Expired Mar 2025.',
+        icon: 'tabler:clock-off',
+      },
+      {
+        title: 'Azure Solutions Architect Expert (Legacy)',
+        description: 'Cert #087449-32DJD0 — Earned Jun 2020 · Expired Jun 2022.',
+        icon: 'tabler:clock-off',
+      },
+      {
+        title: 'Azure Administrator Associate (Legacy)',
+        description: 'Cert #4C85E9-QC3FA3 — Earned May 2019 · Expired May 2022.',
+        icon: 'tabler:clock-off',
+      },
+      {
+        title: 'Azure Administrator Associate',
+        description: 'Cert #AC8587-263B73 — Earned May 2019 · Expired Nov 2025.',
+        icon: 'tabler:clock-off',
+      },
+      {
+        title: 'MCTS: Windows 7 and Office 2010, Deployment',
+        description: 'Cert #379954-AF4AD1 — Earned Apr 2012 · Retired.',
+        icon: 'tabler:archive',
+      },
+      {
+        title: 'MCTS: System Center Configuration Manager 2007',
+        description: 'Cert #162A63-CD19FC — Earned Dec 2011 · Retired.',
+        icon: 'tabler:archive',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get In Touch',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Work With a Certified Expert </Fragment>
+
+    <Fragment slot="subtitle">
+      Leverage Kristopher's deep Microsoft expertise for your next hybrid cloud, security, or infrastructure project.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -19,6 +19,10 @@ export const headerData = {
       href: getPermalink('/community'),
     },
     {
+      text: 'Certifications',
+      href: getPermalink('/certifications'),
+    },
+    {
       text: 'About',
       href: getPermalink('/about'),
     },
@@ -32,6 +36,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About', href: getPermalink('/about') },
+        { text: 'Certifications', href: getPermalink('/certifications') },
         { text: 'Contact', href: getPermalink('/contact') },
         { text: 'Legal', href: getPermalink('/legal') },
       ],
