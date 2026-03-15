@@ -22,3 +22,8 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+# Source brand kit and loose images
+hcs-bridge-brand-kit/
+*.jpeg
+*.JPEG
+og-option-c-services.png

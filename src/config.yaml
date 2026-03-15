@@ -18,9 +18,9 @@ metadata:
   openGraph:
     site_name: 'Hybrid Cloud Solutions'
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/og-image.png'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
     handle: '@countrycloudboy'

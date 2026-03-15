@@ -5,20 +5,23 @@ import { SITE } from 'astrowind:config';
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold whitespace-nowrap flex items-center gap-2"
 >
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="w-8 h-8" aria-hidden="true">
-    <!-- On-prem cloud shape (solid) -->
-    <path
-      d="M12 28c-3.3 0-6-2.7-6-6 0-2.8 1.9-5.1 4.5-5.7C11.2 13 14.3 10.5 18 10.5c3.2 0 6 1.8 7.4 4.5.5-.1 1-.2 1.6-.2 3.3 0 6 2.7 6 6s-2.7 6-6 6H12z"
-      fill="currentColor"
-      class="text-primary"
-      opacity="0.9"></path>
-    <!-- Azure arc overlay (outline) -->
-    <path
-      d="M16 26c-2.8 0-5-2.2-5-5 0-2.3 1.6-4.3 3.8-4.8C15.4 13.8 17.8 12 20.5 12c2.3 0 4.3 1.4 5.2 3.4.4-.1.8-.1 1.3-.1 2.8 0 5 2.2 5 5s-2.2 5-5 5H16z"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.2"
-      class="text-accent dark:text-accent"></path>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-9 h-9 rounded-lg" aria-hidden="true">
+    <rect width="64" height="64" rx="14" fill="#0C4A6E"/>
+    <g transform="translate(32, 32)">
+      <rect x="-20" y="-14" width="22" height="28" rx="4" fill="white" opacity="0.97"/>
+      <rect x="-1" y="-14" width="22" height="28" rx="14" fill="white" opacity="0.88"/>
+      <rect x="-1" y="-14" width="4" height="28" fill="white"/>
+      <rect x="-16" y="-9" width="14" height="4" rx="1.5" fill="none" stroke="#0C4A6E" stroke-width="1"/>
+      <rect x="-16" y="-2" width="14" height="4" rx="1.5" fill="none" stroke="#0C4A6E" stroke-width="1"/>
+      <rect x="-16" y="5" width="14" height="4" rx="1.5" fill="none" stroke="#0C4A6E" stroke-width="1"/>
+      <circle cx="-4.5" cy="-7" r="1.2" fill="#0EA5E9"/>
+      <circle cx="-4.5" cy="0" r="1.2" fill="#0EA5E9"/>
+      <circle cx="-4.5" cy="7" r="1.2" fill="#0EA5E9"/>
+      <path d="M5,4 C4,-2 7,-7 12,-7 C15,-7 17,-5 18,-2 C20,-2 21,0 21,3 C21,5 19,7 17,7 L7,7 C5,7 4,6 4,4" 
+            fill="none" stroke="#0C4A6E" stroke-width="0.9" stroke-linecap="round"/>
+      <path d="M10,0 L12,-3 L14,0" fill="none" stroke="#0EA5E9" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="12" y1="-2" x2="12" y2="5" stroke="#0EA5E9" stroke-width="1" stroke-linecap="round"/>
+    </g>
   </svg>
   <span class="text-gray-900 dark:text-white">{SITE?.name}</span>
 </span>
