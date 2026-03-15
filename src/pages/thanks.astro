@@ -9,7 +9,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroText tagline="Message Received" title="Thank You!" subtitle="We've received your message and will get back to you within one business day." />
+  <HeroText
+    tagline="Message Received"
+    title="Thank You!"
+    subtitle="We've received your message and will get back to you within one business day."
+  />
 
   <CallToAction
     actions={[
@@ -26,9 +30,7 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      While You Wait
-    </Fragment>
+    <Fragment slot="title"> While You Wait </Fragment>
 
     <Fragment slot="subtitle">
       Feel free to explore our services or check out some of our community resources.
