@@ -1,15 +1,16 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import logoPrimary from '~/assets/images/logo-primary-1600.png';
-import logoNavy from '~/assets/images/logo-navy-1600.png';
-import logoBlack from '~/assets/images/logo-black-1600.png';
-import logoWhite from '~/assets/images/logo-white-1600.png';
+import logoPrimary from '~/assets/images/logo-primary-800.png';
+import logoNavy from '~/assets/images/logo-navy-800.png';
+import logoBlack from '~/assets/images/logo-black-800.png';
+import logoWhite from '~/assets/images/logo-white-800.png';
 import horizontalBlue from '~/assets/images/horizontal-blue-1240.png';
 import horizontalDark from '~/assets/images/horizontal-dark-1240.png';
 import horizontalLight from '~/assets/images/horizontal-light-1240.png';
@@ -57,7 +58,8 @@ const metadata = {
       },
       {
         title: 'Respect Color Usage',
-        description: 'Use the correct logo variant for your background. Light logos on dark backgrounds, dark logos on light.',
+        description:
+          'Use the correct logo variant for your background. Light logos on dark backgrounds, dark logos on light.',
         icon: 'tabler:palette',
       },
       {
@@ -67,12 +69,14 @@ const metadata = {
       },
       {
         title: 'Minimum Size',
-        description: 'The logo mark should never appear smaller than 32px. The horizontal logo should be at least 120px wide.',
+        description:
+          'The logo mark should never appear smaller than 32px. The horizontal logo should be at least 120px wide.',
         icon: 'tabler:ruler-2',
       },
       {
         title: 'Attribution',
-        description: 'When referencing our company, use the full name "Hybrid Cloud Solutions" or "Hybrid Cloud Solutions, LLC."',
+        description:
+          'When referencing our company, use the full name "Hybrid Cloud Solutions" or "Hybrid Cloud Solutions, LLC."',
         icon: 'tabler:quote',
       },
     ]}
@@ -126,77 +130,79 @@ const metadata = {
 
   <!-- Primary Logos **************** -->
 
-  <Content
-    id="logos"
-    title="Primary Logos"
-    subtitle="Stacked logo variations for general use."
-    image={{
-      src: logoPrimary,
-      alt: 'HCS Primary Logo',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="mb-4">
-        Our primary logo features the bridge mark icon above the company name. Use the version that provides the best
-        contrast against your background.
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Primary Logos</h2>
+      <p class="text-muted mt-2">
+        Stacked logo variations for general use. Use the version that provides the best contrast against your
+        background.
       </p>
-      <ul class="list-disc list-inside space-y-2 text-muted">
-        <li><strong>Primary (Blue)</strong> — Default for most uses on light backgrounds</li>
-        <li><strong>Navy</strong> — For formal or corporate contexts on light backgrounds</li>
-        <li><strong>Black</strong> — For single-color or print contexts</li>
-        <li><strong>White</strong> — For use on dark or image backgrounds</li>
-      </ul>
-    </Fragment>
-  </Content>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={logoPrimary} alt="HCS Logo Primary" width={200} class="max-h-48 w-auto object-contain" />
+        <span class="text-sm font-medium">Primary (Blue)</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={logoNavy} alt="HCS Logo Navy" width={200} class="max-h-48 w-auto object-contain" />
+        <span class="text-sm font-medium">Navy</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={logoBlack} alt="HCS Logo Black" width={200} class="max-h-48 w-auto object-contain" />
+        <span class="text-sm font-medium">Black</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-slate-800 dark:bg-slate-900">
+        <Image src={logoWhite} alt="HCS Logo White" width={200} class="max-h-48 w-auto object-contain" />
+        <span class="text-sm font-medium text-white">White</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Horizontal Logos **************** -->
 
-  <Content
-    id="horizontal"
-    title="Horizontal Logos"
-    subtitle="Wide-format logos for headers, banners, and partner listings."
-    isReversed
-    image={{
-      src: horizontalBlue,
-      alt: 'HCS Horizontal Logo Blue',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="mb-4">
-        The horizontal layout places the bridge mark alongside the company name. Ideal for website headers, email
-        signatures, and co-branded materials.
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-muted">
-        <li><strong>Blue on White</strong> — Default horizontal variant</li>
-        <li><strong>Dark</strong> — For light backgrounds in professional settings</li>
-        <li><strong>Light</strong> — For dark or colored backgrounds</li>
-      </ul>
-    </Fragment>
-  </Content>
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Horizontal Logos</h2>
+      <p class="text-muted mt-2">Wide-format logos for headers, banners, email signatures, and partner listings.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={horizontalBlue} alt="HCS Horizontal Blue" width={400} class="max-h-24 w-auto object-contain" />
+        <span class="text-sm font-medium">Blue on White</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={horizontalDark} alt="HCS Horizontal Dark" width={400} class="max-h-24 w-auto object-contain" />
+        <span class="text-sm font-medium">Dark</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-slate-800 dark:bg-slate-900">
+        <Image src={horizontalLight} alt="HCS Horizontal Light" width={400} class="max-h-24 w-auto object-contain" />
+        <span class="text-sm font-medium text-white">Light</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Brand Marks **************** -->
 
-  <Content
-    id="marks"
-    title="Brand Marks"
-    subtitle="The standalone bridge icon for favicons, avatars, and small formats."
-    image={{
-      src: markNavy,
-      alt: 'HCS Brand Mark Navy',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="mb-4">
-        The bridge mark represents our core mission — connecting on-premises infrastructure with the cloud. Use it when
-        the full logo won't fit or as a recognizable brand element.
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-muted">
-        <li><strong>Primary (Blue)</strong> — Default mark for most uses</li>
-        <li><strong>Navy</strong> — Formal or corporate contexts</li>
-        <li><strong>White</strong> — For dark backgrounds</li>
-      </ul>
-    </Fragment>
-  </Content>
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Brand Marks</h2>
+      <p class="text-muted mt-2">The standalone bridge icon for favicons, avatars, and small formats.</p>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={markPrimary} alt="HCS Mark Primary" width={120} class="max-h-32 w-auto object-contain" />
+        <span class="text-sm font-medium">Primary</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <Image src={markNavy} alt="HCS Mark Navy" width={120} class="max-h-32 w-auto object-contain" />
+        <span class="text-sm font-medium">Navy</span>
+      </div>
+      <div class="flex flex-col items-center gap-3 p-6 rounded-xl bg-slate-800 dark:bg-slate-900">
+        <Image src={markWhite} alt="HCS Mark White" width={120} class="max-h-32 w-auto object-contain" />
+        <span class="text-sm font-medium text-white">White</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Social / OG Image **************** -->
 
