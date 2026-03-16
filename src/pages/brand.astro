@@ -1,0 +1,238 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import logoPrimary from '~/assets/images/logo-primary-1600.png';
+import logoNavy from '~/assets/images/logo-navy-1600.png';
+import logoBlack from '~/assets/images/logo-black-1600.png';
+import logoWhite from '~/assets/images/logo-white-1600.png';
+import horizontalBlue from '~/assets/images/horizontal-blue-1240.png';
+import horizontalDark from '~/assets/images/horizontal-dark-1240.png';
+import horizontalLight from '~/assets/images/horizontal-light-1240.png';
+import markPrimary from '~/assets/images/mark-primary-400.png';
+import markNavy from '~/assets/images/mark-navy-400.png';
+import markWhite from '~/assets/images/mark-white-400.png';
+import ogImage from '~/assets/images/og-image-1200x630.png';
+
+const metadata = {
+  title: 'Brand Assets',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title">
+      Brand <span class="text-accent dark:text-white">Assets</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Everything you need to represent Hybrid Cloud Solutions correctly. Download logos, marks, and brand guidelines for
+      use in presentations, events, and partner materials.
+    </Fragment>
+  </Hero>
+
+  <!-- Brand Guidelines **************** -->
+
+  <Features
+    id="guidelines"
+    title="Brand Guidelines"
+    subtitle="Please follow these guidelines when using our brand assets."
+    columns={3}
+    items={[
+      {
+        title: 'Use Our Official Assets',
+        description: 'Always use the logos and marks provided on this page. Do not recreate or modify them.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Maintain Clear Space',
+        description: 'Keep adequate spacing around our logo. Do not crowd it with other elements.',
+        icon: 'tabler:spacing-horizontal',
+      },
+      {
+        title: 'Respect Color Usage',
+        description: 'Use the correct logo variant for your background. Light logos on dark backgrounds, dark logos on light.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Do Not Alter',
+        description: 'Do not rotate, stretch, recolor, add effects to, or otherwise modify our logos.',
+        icon: 'tabler:ban',
+      },
+      {
+        title: 'Minimum Size',
+        description: 'The logo mark should never appear smaller than 32px. The horizontal logo should be at least 120px wide.',
+        icon: 'tabler:ruler-2',
+      },
+      {
+        title: 'Attribution',
+        description: 'When referencing our company, use the full name "Hybrid Cloud Solutions" or "Hybrid Cloud Solutions, LLC."',
+        icon: 'tabler:quote',
+      },
+    ]}
+  />
+
+  <!-- Brand Colors **************** -->
+
+  <Content
+    id="colors"
+    title="Brand Colors"
+    subtitle="Our primary color palette."
+    isReversed
+    image={{
+      src: markPrimary,
+      alt: 'HCS Brand Mark',
+    }}
+  >
+    <Fragment slot="content">
+      <div class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg" style="background-color: #0EA5E9;"></div>
+          <div>
+            <p class="font-semibold">Primary Blue</p>
+            <p class="text-sm text-muted">#0EA5E9 · rgb(14, 165, 233)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg" style="background-color: #0C4A6E;"></div>
+          <div>
+            <p class="font-semibold">Navy</p>
+            <p class="text-sm text-muted">#0C4A6E · rgb(12, 74, 110)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg" style="background-color: #0F172A;"></div>
+          <div>
+            <p class="font-semibold">Dark Slate</p>
+            <p class="text-sm text-muted">#0F172A · rgb(15, 23, 42)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg border border-gray-200" style="background-color: #FFFFFF;"></div>
+          <div>
+            <p class="font-semibold">White</p>
+            <p class="text-sm text-muted">#FFFFFF · rgb(255, 255, 255)</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Primary Logos **************** -->
+
+  <Content
+    id="logos"
+    title="Primary Logos"
+    subtitle="Stacked logo variations for general use."
+    image={{
+      src: logoPrimary,
+      alt: 'HCS Primary Logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="mb-4">
+        Our primary logo features the bridge mark icon above the company name. Use the version that provides the best
+        contrast against your background.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-muted">
+        <li><strong>Primary (Blue)</strong> — Default for most uses on light backgrounds</li>
+        <li><strong>Navy</strong> — For formal or corporate contexts on light backgrounds</li>
+        <li><strong>Black</strong> — For single-color or print contexts</li>
+        <li><strong>White</strong> — For use on dark or image backgrounds</li>
+      </ul>
+    </Fragment>
+  </Content>
+
+  <!-- Horizontal Logos **************** -->
+
+  <Content
+    id="horizontal"
+    title="Horizontal Logos"
+    subtitle="Wide-format logos for headers, banners, and partner listings."
+    isReversed
+    image={{
+      src: horizontalBlue,
+      alt: 'HCS Horizontal Logo Blue',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="mb-4">
+        The horizontal layout places the bridge mark alongside the company name. Ideal for website headers, email
+        signatures, and co-branded materials.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-muted">
+        <li><strong>Blue on White</strong> — Default horizontal variant</li>
+        <li><strong>Dark</strong> — For light backgrounds in professional settings</li>
+        <li><strong>Light</strong> — For dark or colored backgrounds</li>
+      </ul>
+    </Fragment>
+  </Content>
+
+  <!-- Brand Marks **************** -->
+
+  <Content
+    id="marks"
+    title="Brand Marks"
+    subtitle="The standalone bridge icon for favicons, avatars, and small formats."
+    image={{
+      src: markNavy,
+      alt: 'HCS Brand Mark Navy',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="mb-4">
+        The bridge mark represents our core mission — connecting on-premises infrastructure with the cloud. Use it when
+        the full logo won't fit or as a recognizable brand element.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-muted">
+        <li><strong>Primary (Blue)</strong> — Default mark for most uses</li>
+        <li><strong>Navy</strong> — Formal or corporate contexts</li>
+        <li><strong>White</strong> — For dark backgrounds</li>
+      </ul>
+    </Fragment>
+  </Content>
+
+  <!-- Social / OG Image **************** -->
+
+  <Content
+    id="social"
+    title="Social Media & Open Graph"
+    subtitle="Pre-formatted image for social sharing and link previews."
+    isReversed
+    image={{
+      src: ogImage,
+      alt: 'HCS Open Graph Image',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="mb-4">
+        Use this 1200×630 image for Open Graph tags, Twitter cards, and social media link previews. It's pre-sized for
+        optimal display across platforms.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- CTA **************** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">Need Something Custom?</Fragment>
+    <Fragment slot="subtitle">
+      If you need a specific format, size, or co-branded version of our assets, reach out and we'll get it to you.
+    </Fragment>
+  </CallToAction>
+</Layout>

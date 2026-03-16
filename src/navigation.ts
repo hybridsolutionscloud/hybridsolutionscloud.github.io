@@ -38,6 +38,7 @@ export const footerData = {
         { text: 'About', href: getPermalink('/about') },
         { text: 'Certifications', href: getPermalink('/certifications') },
         { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'Brand Assets', href: getPermalink('/brand') },
         { text: 'Legal', href: getPermalink('/legal') },
       ],
     },
