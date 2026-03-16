@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Image } from 'astro:assets';
 
 import kristopherSpeakingImg from '~/assets/images/kristopher-speaking.jpeg';
 
@@ -31,11 +32,18 @@ const metadata = {
         target: '_blank',
       },
     ]}
-    image={{
-      src: kristopherSpeakingImg,
-      alt: 'Kristopher Turner speaking at a conference',
-    }}
-  />
+  >
+    <Fragment slot="image">
+      <Image
+        src={kristopherSpeakingImg}
+        alt="Kristopher Turner speaking at a conference"
+        class="mx-auto rounded-md w-full"
+        widths={[400, 768, 1024]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, 1024px"
+        loading="eager"
+      />
+    </Fragment>
+  </Hero>
 
   <!-- Features Widget - Featured Sessions *************** -->
 
@@ -185,11 +193,16 @@ const metadata = {
         description: 'With Chris Cavazos, Travis Roberts & Adam Nichols',
       },
     ]}
-    image={{
-      src: kristopherSpeakingImg,
-      alt: 'Kristopher Turner speaking',
-    }}
   >
+    <Fragment slot="image">
+      <Image
+        src={kristopherSpeakingImg}
+        alt="Kristopher Turner speaking"
+        class="mx-auto w-full rounded-lg shadow-lg"
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 100vw, 432px"
+      />
+    </Fragment>
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">9 Sessions at MMS 2026</h3>
       <p class="mb-4">
