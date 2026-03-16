@@ -51,6 +51,15 @@ export const footerData = {
         { text: 'Community', href: getPermalink('/community') },
       ],
     },
+    {
+      title: 'Our Sites',
+      links: [
+        { text: 'azurelocal.cloud', href: 'https://azurelocal.cloud' },
+        { text: 'thisismydemo.cloud', href: 'https://thisismydemo.cloud' },
+        { text: 'GitHub: AzureLocal', href: 'https://github.com/AzureLocal' },
+        { text: 'GitHub: thisismydemo', href: 'https://github.com/thisismydemo' },
+      ],
+    },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/legal') },
