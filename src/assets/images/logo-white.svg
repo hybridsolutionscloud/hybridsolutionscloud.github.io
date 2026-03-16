@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#FFFFFF"/>
+  <g transform="translate(200, 165)">
+    <rect x="-98" y="-52" width="104" height="104" rx="14" fill="#0C4A6E" opacity="0.97"/>
+    <rect x="-6" y="-52" width="104" height="104" rx="52" fill="#0C4A6E" opacity="0.88"/>
+    <rect x="-6" y="-52" width="12" height="104" fill="#0C4A6E"/>
+    <g transform="translate(-46, 0)">
+      <rect x="-22" y="-28" width="44" height="15" rx="3.5" fill="none" stroke="#0C4A6E" stroke-width="1.8"/>
+      <rect x="-22" y="-8" width="44" height="15" rx="3.5" fill="none" stroke="#0C4A6E" stroke-width="1.8"/>
+      <rect x="-22" y="12" width="44" height="15" rx="3.5" fill="none" stroke="#0C4A6E" stroke-width="1.8"/>
+      <circle cx="15" cy="-20.5" r="2.5" fill="#0EA5E9"/>
+      <circle cx="15" cy="-0.5" r="2.5" fill="#0EA5E9"/>
+      <circle cx="15" cy="19.5" r="2.5" fill="#0EA5E9"/>
+      <line x1="-16" y1="-20.5" x2="6" y2="-20.5" stroke="#0C4A6E" stroke-width="1.2" opacity="0.3"/>
+      <line x1="-16" y1="-0.5" x2="6" y2="-0.5" stroke="#0C4A6E" stroke-width="1.2" opacity="0.3"/>
+      <line x1="-16" y1="19.5" x2="6" y2="19.5" stroke="#0C4A6E" stroke-width="1.2" opacity="0.3"/>
+    </g>
+    <g transform="translate(46, -2)">
+      <path d="M-18,12 C-22,-4 -12,-20 6,-20 C16,-20 24,-14 27,-6 C32,-6 36,0 36,7 C36,14 31,19 24,19 L-14,19 C-18,19 -22,15 -22,11" 
+            fill="none" stroke="#0C4A6E" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M-6,2 L2,-8 L10,2" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="2" y1="-6" x2="2" y2="14" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="200" y="278" text-anchor="middle" font-family="Segoe UI, SF Pro Display, sans-serif" font-weight="600" font-size="27" fill="#0C4A6E" letter-spacing="2.5">HYBRID CLOUD</text>
+  <text x="200" y="310" text-anchor="middle" font-family="Segoe UI, SF Pro Display, sans-serif" font-weight="600" font-size="27" fill="#0C4A6E" letter-spacing="2.5">SOLUTIONS</text>
+  <line x1="140" y1="326" x2="260" y2="326" stroke="#0C4A6E" stroke-width="0.5" opacity="0.25"/>
+  <text x="200" y="350" text-anchor="middle" font-family="Segoe UI, SF Pro Display, sans-serif" font-weight="300" font-size="11.5" fill="#0C4A6E" opacity="0.6" letter-spacing="4.5">HYBRID CLOUD MADE SIMPLE</text>
+</svg>

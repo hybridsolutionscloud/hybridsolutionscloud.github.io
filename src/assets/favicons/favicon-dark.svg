@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#0F172A"/>
+  <g transform="translate(32, 32)">
+    <!-- Square (on-prem) -->
+    <rect x="-20" y="-14" width="22" height="28" rx="4" fill="white" opacity="0.97"/>
+    <!-- Pill (cloud) -->
+    <rect x="-1" y="-14" width="22" height="28" rx="14" fill="white" opacity="0.88"/>
+    <!-- Bridge -->
+    <rect x="-1" y="-14" width="4" height="28" fill="white"/>
+    <!-- Server bars -->
+    <rect x="-16" y="-9" width="14" height="4" rx="1.5" fill="none" stroke="#0F172A" stroke-width="1"/>
+    <rect x="-16" y="-2" width="14" height="4" rx="1.5" fill="none" stroke="#0F172A" stroke-width="1"/>
+    <rect x="-16" y="5" width="14" height="4" rx="1.5" fill="none" stroke="#0F172A" stroke-width="1"/>
+    <!-- LEDs -->
+    <circle cx="-4.5" cy="-7" r="1.2" fill="#38BDF8"/>
+    <circle cx="-4.5" cy="0" r="1.2" fill="#38BDF8"/>
+    <circle cx="-4.5" cy="7" r="1.2" fill="#38BDF8"/>
+    <!-- Cloud mini -->
+    <path d="M5,4 C4,-2 7,-7 12,-7 C15,-7 17,-5 18,-2 C20,-2 21,0 21,3 C21,5 19,7 17,7 L7,7 C5,7 4,6 4,4" 
+          fill="none" stroke="#0F172A" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Arrow -->
+    <path d="M10,0 L12,-3 L14,0" fill="none" stroke="#38BDF8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="12" y1="-2" x2="12" y2="5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+  </g>
+</svg>
