@@ -1,0 +1,85 @@
+---
+import { SITE } from 'astrowind:config';
+
+const siteUrl = SITE.site || 'https://www.hybridsolutions.cloud';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteUrl}/#organization`,
+  name: 'Hybrid Cloud Solutions, LLC',
+  url: siteUrl,
+  logo: `${siteUrl}/_astro/logo-primary-800.png`,
+  description:
+    'Microsoft hybrid cloud consulting, training, and architecture — specializing in Azure Local, Azure Arc, Hyper-V, and edge infrastructure.',
+  foundingDate: '2023',
+  areaServed: 'US',
+  serviceType: ['Hybrid Cloud Consulting', 'Azure Architecture', 'Microsoft Training', 'Conference Speaking'],
+  sameAs: [
+    'https://twitter.com/countrycloudboy',
+    'https://youtube.com/@countrycloudboy',
+    'https://github.com/hybridsolutionscloud',
+    'https://www.linkedin.com/in/intcloudboy/',
+    'https://sessionize.com/kristopherjturner/',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    url: `${siteUrl}/contact`,
+    contactType: 'customer service',
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Kristopher Turner',
+  jobTitle: 'Founder & Principal Consultant',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Hybrid Cloud Solutions, LLC',
+  },
+  url: siteUrl,
+  sameAs: [
+    'https://twitter.com/countrycloudboy',
+    'https://youtube.com/@countrycloudboy',
+    'https://www.linkedin.com/in/intcloudboy/',
+    'https://sessionize.com/kristopherjturner/',
+    'https://mvp.microsoft.com/en-US/mvp/profile/76834ced-665a-e411-93f2-9cb65495d3c4',
+  ],
+  knowsAbout: [
+    'Microsoft Azure',
+    'Azure Local',
+    'Azure Arc',
+    'Hyper-V',
+    'Azure Virtual Desktop',
+    'Hybrid Cloud Architecture',
+    'Windows Server',
+  ],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certification',
+      name: 'Microsoft Certified: Azure Solutions Architect Expert',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certification',
+      name: 'Microsoft Certified: Cybersecurity Architect Expert',
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Hybrid Cloud Solutions',
+  url: siteUrl,
+  publisher: {
+    '@id': `${siteUrl}/#organization`,
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
