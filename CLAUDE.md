@@ -2,14 +2,15 @@
 
 ## What this repo is
 
-Static site / blog in the hybridsolutionscloud organization. Published via GitHub Pages.
+Website for [Hybrid Cloud Solutions, LLC](https://hybridsolutionscloud.github.io) — founded by Microsoft MVP and MCT Kristopher Turner.
 
 ---
 
 ## ADO project details
 
 - **ADO org:** https://dev.azure.com/hybridcloudsolutions
-- **ADO project:** hybridsolutionscloud
+- **ADO project:** Hybrid Cloud Solutions
+- **Area path:** Platform Engineering\Onboarding
 - **Work item format:** `AB#<id>` in commit messages and PR descriptions
 
 ---
@@ -28,7 +29,7 @@ This repo follows all HCS platform standards defined in the Platform Engineering
 | Claude Code | [docs/standards/claude-code.md](https://dev.azure.com/hybridcloudsolutions/Platform%20Engineering/_git/Platform%20Engineering?path=/docs/standards/claude-code.md) |
 
 Key rules:
-- All scripts: PowerShell 7+ only. `#Requires -Version 7.0`, `Set-StrictMode -Version Latest`, `\Stop = 'Stop'`.
+- All scripts: PowerShell 7+ only. `#Requires -Version 7.0`, `Set-StrictMode -Version Latest`, ` $ErrorActionPreference = 'Stop'`.
 - All docs: Markdown only. No Word documents in any repo.
 - Commit format: `type(scope): short description` — types: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`
 - No secrets, tokens, or credentials committed to any file.
@@ -44,9 +45,68 @@ Key rules:
 | Azure login | kris@hybridsolutions.cloud |
 | Key Vault | kv-hcs-vault-01 |
 
-Load environment before starting a session:
+### Environment variables expected
+
+| Variable | Source | Purpose |
+|---|---|---|
+| `GITHUB_TOKEN` | kv-hcs-vault-01 via Load-HCSEnvironment.ps1 | GitHub CLI and git operations |
+| `AZURE_DEVOPS_EXT_PAT` | kv-hcs-vault-01 via Load-HCSEnvironment.ps1 | ADO CLI (`az boards`, `az devops`) |
+Load before starting a session:
 ```powershell
 . E:\git\platform\scripts\Load-HCSEnvironment.ps1
+```
+
+### Build and test commands
+
+```
+npm install
+npm run build
+npm run dev
+```
+
+---
+
+## Repo structure
+
+```
+hybridsolutionscloud.github.io/
+├── .claude/
+    └── settings.json
+├── .frontmatter/
+    └── database/
+├── .github/
+    └── workflows/
+├── .vscode/
+    ├── astrowind/
+    ├── extensions.json
+    ├── launch.json
+    └── settings.json
+├── nginx/
+    └── nginx.conf
+├── public/
+    ├── decapcms/
+    ├── _headers
+    └── robots.txt
+├── src/
+    ├── assets/
+    ├── components/
+    ├── content/
+    ├── data/
+    └── layouts/
+├── vendor/
+    ├── integration/
+    └── README.md
+├── .dockerignore
+├── .editorconfig
+├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc.cjs
+├── .stackblitzrc
+├── astro.config.ts
+├── CLAUDE.md
+├── docker-compose.yml
+└── ...
 ```
 
 ---
@@ -61,10 +121,19 @@ Load environment before starting a session:
 - `npm` or `bundle` commands for local preview
 
 **Always confirm before:**
-- Any operation that modifies Azure resources
-- Installing or upgrading dependencies
+- Creating or deleting Azure resources
+- Any `az` CLI write operation that modifies Azure state
 - Running destructive operations
 - Making API calls to external services
+
+
+---
+
+## Subagents available in this repo
+
+- `hybridsolutionscloud.github.io-engineer` (model: sonnet) — Expert in `hybridsolutionscloud.github.io`: deep knowledge of this repo's structure, conventions, and development workflow.
+
+User-level agents (available in every repo session): `triage-lookup`, `markdown-prose-editor`, `azurelocal-domain-expert`, `mkdocs-material-doctor`, `turner-module-scaffold-engineer`, `mms-2026-demo-presenter`.
 
 ---
 
