@@ -71,10 +71,10 @@ Full contract: the [AI workspace standard](https://platform.hybridsolutions.clou
 
 ## Key facts
 
-| Fact | Value |
-|---|---|
-| ADO org | <https://dev.azure.com/hybridcloudsolutions> |
-| ADO project | N/A - see registry.yaml `ado_project` or ask the HCS Governance MCP `get_repo` for this repo's work-item tracking project |
-| Area path | N/A - see registry.yaml or ask the HCS Governance MCP |
-| Key Vault | kv-hcs-vault-01 |
-| Work item format | `AB#<id>` in commits and PRs |
+| Fact             | Value                                                                                                                     |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| ADO org          | <https://dev.azure.com/hybridcloudsolutions>                                                                              |
+| ADO project      | N/A - see registry.yaml `ado_project` or ask the HCS Governance MCP `get_repo` for this repo's work-item tracking project |
+| Area path        | N/A - see registry.yaml or ask the HCS Governance MCP                                                                     |
+| Key Vault        | kv-hcs-vault-01                                                                                                           |
+| Work item format | `AB#<id>` in commits and PRs                                                                                              |

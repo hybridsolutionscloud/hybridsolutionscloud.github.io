@@ -7,8 +7,14 @@
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/block-secrets.ps1" },
-          { "type": "command", "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/validate-path.ps1" }
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/block-secrets.ps1"
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/validate-path.ps1"
+          }
         ]
       }
     ],
@@ -16,14 +22,20 @@
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/log-tokens.ps1" }
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/log-tokens.ps1"
+          }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/summarize-session.ps1" }
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File D:/git/hybridsolutionscloud/hybridsolutionscloud.github.io/.claude/hooks/summarize-session.ps1"
+          }
         ]
       }
     ]
