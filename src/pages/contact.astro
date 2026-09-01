@@ -1,88 +1,62 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Hybrid Cloud Solutions for consulting, training, or speaking engagements. We respond within one business day.',
+    'Contact Hybrid Cloud Solutions about consulting, training, speaking engagements, and community collaboration.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
   <HeroText
     tagline="Get In Touch"
     title="Let's Build Something Together"
-    subtitle="Whether you need hybrid cloud consulting, training, or a conference speaker — we'd love to hear from you."
+    subtitle="For consulting, training, speaking, or collaboration inquiries, contact us directly by email."
   />
 
-  <ContactUs
-    id="form"
-    title="Send Us a Message"
-    subtitle="Fill out the form below and we'll get back to you within one business day."
-    action="https://submit-form.com/tJdRWGIgc"
-    method="POST"
-    inputs={[
+  <CallToAction
+    actions={[
       {
-        type: 'hidden',
-        name: '_redirect',
-        placeholder: 'https://www.hybridsolutions.cloud/thanks',
-      },
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-        placeholder: 'Your name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-        placeholder: 'your.email@example.com',
-      },
-      {
-        type: 'text',
-        name: 'subject',
-        label: 'Subject',
-        placeholder: 'How can we help?',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-      name: 'message',
-      placeholder: 'Tell us about your project or question...',
-      rows: 6,
-    }}
-    disclaimer={{
-      label:
-        'By submitting this form, you acknowledge and agree to our collection of your personal information as described in our Privacy Policy.',
-    }}
-    button="Send Message"
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Other Ways to Reach Us"
-    items={[
-      {
-        title: 'Email',
-        description: 'contact@hybridsolutions.cloud',
+        variant: 'primary',
+        text: 'Email Us',
+        href: 'mailto:contact@hybridsolutions.cloud',
         icon: 'tabler:mail',
       },
       {
-        title: 'Social',
-        description: 'Follow us @countrycloudboy on X and YouTube',
-        icon: 'tabler:brand-x',
+        variant: 'secondary',
+        text: 'Explore Services',
+        href: '/services',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">Start a Conversation</Fragment>
+    <Fragment slot="subtitle">
+      Email contact@hybridsolutions.cloud and include a short description of what you would like to discuss.
+    </Fragment>
+  </CallToAction>
+
+  <Features2
+    title="How We Can Help"
+    items={[
+      {
+        title: 'Consulting',
+        description: 'Architecture, deployment, and modernization for Microsoft hybrid cloud infrastructure.',
+        icon: 'tabler:cloud-computing',
       },
       {
-        title: 'Based In',
-        description: 'Western Virginia, USA — serving clients nationwide',
-        icon: 'tabler:map-pin',
+        title: 'Training',
+        description: 'Practical technical training tailored to your team and environment.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Speaking',
+        description: 'Conference sessions, workshops, user groups, and community events.',
+        icon: 'tabler:microphone',
       },
     ]}
   />

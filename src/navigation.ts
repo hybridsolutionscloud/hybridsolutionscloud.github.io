@@ -54,6 +54,7 @@ export const footerData = {
     {
       title: 'Our Sites',
       links: [
+        { text: 'labs.hybridsolutions.cloud', href: 'https://labs.hybridsolutions.cloud' },
         { text: 'azurelocal.cloud', href: 'https://azurelocal.cloud' },
         { text: 'thisismydemo.cloud', href: 'https://thisismydemo.cloud' },
         { text: 'GitHub: AzureLocal', href: 'https://github.com/AzureLocal' },
