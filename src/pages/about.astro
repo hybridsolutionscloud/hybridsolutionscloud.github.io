@@ -137,10 +137,64 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget - Web Properties: azurelocal.cloud **************** -->
+  <!-- Content Widget - Web Properties: inthefog.cloud **************** -->
 
   <Content
     isReversed
+    tagline="Our Web Properties"
+    title="inthefog.cloud"
+    subtitle="The hub for all of our hybrid cloud work — one place to find every project, tool, and guide."
+    items={[
+      {
+        title: 'Azure Local',
+        description: 'Deployment guides, automation, and the full set of Azure Local tools in one catalog.',
+        icon: 'tabler:server-2',
+      },
+      {
+        title: 'Hyper-V',
+        description: 'Hyper-V and failover clustering guidance, with the Hyper-V planning and design tools.',
+        icon: 'tabler:stack-2',
+      },
+      {
+        title: 'Azure Arc',
+        description: 'Bringing on-premises servers and services under Azure management.',
+        icon: 'tabler:cloud-network',
+      },
+      {
+        title: 'Hybrid Operations',
+        description: 'Monitoring, ITSM, identity, and automation for environments that span datacenter and cloud.',
+        icon: 'tabler:settings-automation',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+      alt: 'Hybrid cloud hub',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">inthefog.cloud</h3>
+      <p class="mb-4">
+        Our hybrid cloud hub. It brings together Azure Local, Hyper-V, Azure Arc, and hybrid operations — the projects,
+        tools, and documentation from all of our sites — so you can find your way from one place.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://inthefog.cloud" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:w-auto">
+          Visit inthefog.cloud
+        </a>
+        <a href="https://github.com/InTheFog-Cloud" target="_blank" rel="noopener noreferrer" class="btn sm:w-auto">
+          GitHub: InTheFog-Cloud
+        </a>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget - Web Properties: azurelocal.cloud **************** -->
+
+  <Content
     tagline="Our Web Properties"
     title="azurelocal.cloud"
     subtitle="The dedicated Azure Local resource hub — tools, guides, and community projects."
@@ -185,6 +239,67 @@ const metadata = {
         </a>
         <a href="https://github.com/AzureLocal" target="_blank" rel="noopener noreferrer" class="btn sm:w-auto">
           GitHub: AzureLocal
+        </a>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget - Web Properties: labs.hybridsolutions.cloud **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Web Properties"
+    title="labs.hybridsolutions.cloud"
+    subtitle="Hybrid Cloud Solutions Labs — tools in preview and projects in the lab."
+    items={[
+      {
+        title: 'AzureScout',
+        description: 'Azure and Microsoft Entra inventory with Cloud Adoption and Well-Architected checks.',
+        icon: 'tabler:radar',
+      },
+      {
+        title: 'Hyper-V Surveyor and Trailwright',
+        description: 'Plan, size, and design Windows Server Hyper-V clusters.',
+        icon: 'tabler:ruler-measure',
+      },
+      {
+        title: 'Azure Local Trailwright',
+        description: 'A guided designer for Azure Local deployments, from requirements to exported configuration.',
+        icon: 'tabler:route',
+      },
+      {
+        title: 'Vault Prospector',
+        description: 'A desktop explorer for Azure Key Vault metadata.',
+        icon: 'tabler:key',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Hybrid Cloud Solutions Labs',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">labs.hybridsolutions.cloud</h3>
+      <p class="mb-4">
+        Where new tools start. Labs hosts our preview and in-the-lab projects for Azure, Hyper-V, and hybrid operations,
+        each with its own documentation.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="https://labs.hybridsolutions.cloud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary sm:w-auto"
+        >
+          Visit Labs
+        </a>
+        <a
+          href="https://github.com/Hybrid-Solutions-Cloud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn sm:w-auto"
+        >
+          GitHub: Hybrid-Solutions-Cloud
         </a>
       </div>
     </Fragment>
